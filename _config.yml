@@ -26,3 +26,6 @@ defaults:
       type: "actualites"
     values:
       layout: "post"
+
+gems:
+  - jekyll-sitemap
