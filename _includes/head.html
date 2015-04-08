@@ -14,7 +14,7 @@
   <!--[if lte IE 8]>
     <link rel="stylesheet" href="css/layouts/pricing-old-ie.css">
   <![endif]-->
-  <link rel="stylesheet" href="css/they.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/they.css">
   <link href='http://fonts.googleapis.com/css?family=Roboto:300,500' rel='stylesheet' type='text/css'>
   <script>
 	var col = new Array();
@@ -45,7 +45,7 @@
           document.getElementById(elem_id).innerHTML=xmlhttp.responseText;
         }
       }
-      xmlhttp.open("GET",source_url,true);
+      xmlhttp.open("GET","{{ site.baseurl }}"+source_url,true);
       xmlhttp.send();
     }
     function load_previous(collection_name) {

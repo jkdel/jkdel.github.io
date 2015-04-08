@@ -54,4 +54,4 @@ Damoiseau de Theyssamy a pour père **Urlevent du Bary**, un très jeune étalon
 </table>
 
 
-![Damoiseau de Theyssamy](../images/g_mini.jpg 'Damoiseau de Theyssamy')
+![Damoiseau de Theyssamy]({{ site.baseurl }}/images/g_mini.jpg 'Damoiseau de Theyssamy')
