@@ -11,43 +11,42 @@ Damoiseau de Theyssamy a pour père **Urlevent du Bary**, un très jeune étalon
 
 <table class="genealogie">
         <tr>
-                <td rowspan="4" class="c-cell">BEGUIN DE MOENS SFA</td>
-                <td rowspan="2" class="c-cell">QUOUGLOF ROUGE SFA</td>
-                <td class="c-cell">KOUGLOF II SFA</td>
+                <td rowspan="4" class="c-cell">Quaprice Boimargot Quincy (de) HOLST</td>
+                <td rowspan="2" class="c-cell">Quidam De Revel SFA</td>
+                <td class="c-cell">Jalisco B SFA</td>
         </tr>
         <tr>
-                <td class="c-cell">VERBOISE SFA</td>
-                <td></td>
-
-                <td></td>
-        </tr>
-        <tr>
-                <td rowspan="2" class="c-cell">SWETTIE DE MOENS SFA</td>
-                <td class="c-cell">LE PLANTERO SFA</td>
-                <td></td>
-        </tr>
-        <tr>
-                <td class="c-cell">TENDERLY SFA</td>
+                <td class="c-cell">Dirka SFA</td>
                 <td></td>
                 <td></td>
         </tr>
         <tr>
-                <td rowspan="4" class="c-cell">DORIA DE THEYSSAMY SFA</td>
-                <td rowspan="2" class="c-cell">LIVAROT SFA</td>
-                <td class="c-cell">BRILLOSO SFA</td>
+                <td rowspan="2" class="c-cell">Wella I (de) HOLST</td>
+                <td class="c-cell">Lord HOLST</td>
+                <td></td>
         </tr>
         <tr>
-                <td class="c-cell">CORINA I SFA</td>
+                <td class="c-cell">Lyrik HOLST</td>
                 <td></td>
                 <td></td>
         </tr>
         <tr>
-                <td rowspan="2" class="c-cell">SHIVA DE THEYSSAMY SFA</td>
-                <td class="c-cell">MY LORD FONTAINE SFA</td>
+                <td rowspan="4" class="c-cell">Ambre De Theyssamy SFA</td>
+                <td rowspan="2" class="c-cell">Foudre De Guerre SFA</td>
+                <td class="c-cell">Nankin SFA</td>
+        </tr>
+        <tr>
+                <td class="c-cell">Quenotte B SFA</td>
+                <td></td>
                 <td></td>
         </tr>
         <tr>
-                <td class="c-cell">DAUPHINOISE SFA</td>
+                <td rowspan="2" class="c-cell">Dauphinoise SFA</td>
+                <td class="c-cell">Ton Bonheur SFA</td>
+                <td></td>
+        </tr>
+        <tr>
+                <td class="c-cell">Passagere De David SFA</td>
                 <td></td>
                 <td></td>
         </tr>

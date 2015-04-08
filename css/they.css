@@ -33,7 +33,6 @@ strong {
     background-image: url("../images/b_mini.jpg");
     background-position: center center;
     background-size: cover;
-    /*box-shadow: 0 0.25em 0.6em 0 rgba(0, 0, 0, 0.25);*/
     text-align: center;
     color: rgba(255, 255, 255, 0.95);
     display: block;
@@ -102,9 +101,6 @@ strong {
     display: table-cell;
     height: 100%;
     width: 4%;
-    /*min-width: 25px;
-    fixed table layout overrides
-    */
     background: rgba(0,0,0,0.1);
     position: relative;
 }
@@ -204,14 +200,19 @@ article img {
 
 /*article p,*/
 article table {
-    overflow: hidden; /* Fix for firefox and IE 10-11  */
-    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-    page-break-inside: avoid; /* Deprecated Firefox */
-    -moz-column-break-inside:avoid; /* Current Firefox */
+    overflow: hidden;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    -moz-column-break-inside:avoid;
     column-break-inside:avoid;
-    break-inside: avoid; /* IE 10+ */
+    break-inside: avoid;
     break-inside: avoid-column;
     margin: 0;
+}
+
+article p {
+    margin: 0;
+    padding: 0;
 }
 
 p + table, table + p {
