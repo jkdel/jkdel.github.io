@@ -12,6 +12,8 @@ markdown: kramdown
 collections:
   elevage:
     output: true
+  a_vendre:
+    output: true
   actualites:
     output: true
 
@@ -19,6 +21,11 @@ defaults:
   -
     scope:
       type: "elevage"
+    values:
+      layout: "post"
+  -
+    scope:
+      type: "a_vendre"
     values:
       layout: "post"
   -

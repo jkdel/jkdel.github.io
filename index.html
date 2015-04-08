@@ -3,7 +3,7 @@ layout: default
 ---
 
   {% for collection in site.collections %}
-    {% if collection[1].docs %}
+    {% if collection[1].docs[0] %}
         <section class="{{collection[0]}} content-holder">
           <div class="goto-side" onclick='load_previous("{{collection[0]}}");'>
             <div class="arrow">

@@ -19,7 +19,7 @@
   <script>
 	var col = new Array();
 	{% for collection in site.collections %}
-		{% if collection[1].docs %}
+		{% if collection[1].docs[0] %}
 			col.push({
 				name: "{{ collection[0] }}",
 				docs: {{ collection[1].docs | map: 'url' | jsonify }},
