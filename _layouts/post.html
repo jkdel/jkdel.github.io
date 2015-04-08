@@ -1,0 +1,24 @@
+---
+---
+
+<header class="post-header">
+    <div class="collection"><span class="collection-title">{{ page.collection | replace: "actualites","Actualités" | replace: "elevage","Élevage" | replace: "a_vendre","À vendre" }}</span>
+    <span class="document-index">
+    {% for collection in site.collections %}
+    	{% if collection[0] == page.collection %}
+    		{% for document in collection[1].docs %}
+    			{% if page.url == document.url %}
+    				{{forloop.index}}/{{forloop.length}}
+    			{% endif %}
+    		{% endfor %}
+    	{% endif %}
+    {% endfor %}
+    </span>
+    </div>
+    <h1 class="post-title">{{ page.title }}</h2>
+    <p class="post-meta">{{ page.date | date: "%d/%m/%Y" }}</p>
+</header>
+
+<article class="post-content">
+  {{ content }}
+</article>

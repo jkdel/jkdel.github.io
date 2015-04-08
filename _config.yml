@@ -1,0 +1,28 @@
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+description: "Élevage de Theyssamy – Chevaux de sport, pensions, cours, compétition, balade"
+baseurl: ""
+url: "http://www.theyssamy.fr"
+github_username: jkdel
+
+# Build settings
+markdown: kramdown
+
+collections:
+  elevage:
+    output: true
+  actualites:
+    output: true
+
+defaults:
+  -
+    scope:
+      type: "elevage"
+    values:
+      layout: "post"
+  -
+    scope:
+      type: "actualites"
+    values:
+      layout: "post"

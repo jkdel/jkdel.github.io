@@ -1,0 +1,80 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Élevage de Theyssamy – Chevaux de sport, pensions, cours, compétition, balade">
+  <title>Élevage de Theyssamy</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+  <!--<![endif]-->
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/layouts/pricing-old-ie.css">
+  <![endif]-->
+  <link rel="stylesheet" href="css/they.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:300,500' rel='stylesheet' type='text/css'>
+  <script>
+	var col = new Array();
+	{% for collection in site.collections %}
+		{% if collection[1].docs %}
+			col.push({
+				name: "{{ collection[0] }}",
+				docs: {{ collection[1].docs | map: 'url' | jsonify }},
+				loaded: -1
+			});
+		{% endif %}
+	{% endfor %}
+    function init() {
+    	for (var len = col.length, i=0; i<len; ++i) {
+    		loadXMLDoc(col[i].name,col[i].docs[col[i].docs.length-1]);
+    		col[i].loaded = col[i].docs.length-1;
+    	}
+    }
+    function loadXMLDoc(elem_id, source_url) {
+      var xmlhttp;
+      if (window.XMLHttpRequest) {
+        xmlhttp=new XMLHttpRequest();
+      } else {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange=function() {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+          document.getElementById(elem_id).innerHTML=xmlhttp.responseText;
+        }
+      }
+      xmlhttp.open("GET",source_url,true);
+      xmlhttp.send();
+    }
+    function load_previous(collection_name) {
+    	for (var len = col.length, i=0; i<len; ++i) {
+    		if (col[i].name == collection_name && col[i].docs.length > 1) {
+    			if (col[i].loaded == 0) {
+		    		loadXMLDoc(col[i].name,col[i].docs[col[i].docs.length-1]);
+		    		col[i].loaded = col[i].docs.length-1;
+    			} else {
+		    		loadXMLDoc(col[i].name,col[i].docs[col[i].loaded-1]);
+		    		col[i].loaded = col[i].loaded-1;
+    			}
+    			break;
+    		}
+    	}
+    }
+    function load_next(collection_name) {
+    	for (var len = col.length, i=0; i<len; ++i) {
+    		if (col[i].name == collection_name && col[i].docs.length > 1) {
+    			if (col[i].loaded == col[i].docs.length-1) {
+		    		loadXMLDoc(col[i].name,col[i].docs[0]);
+		    		col[i].loaded = 0;
+    			} else {
+		    		loadXMLDoc(col[i].name,col[i].docs[col[i].loaded+1]);
+		    		col[i].loaded = col[i].loaded+1;
+    			}
+    			break;
+    		}
+    	}
+    }
+  </script>
+</head>

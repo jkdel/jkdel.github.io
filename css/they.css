@@ -1,0 +1,351 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #1c1d26;
+}
+
+h1, h2, p, td {
+    font-family: "Roboto";
+    font-weight: 300;
+}
+
+p {
+    line-height: 1.6em;
+}
+
+strong {
+  font-weight: 500;
+}
+
+/* BANNER */
+
+[class*="wrap"] {
+    height: 100%;
+    display: flex;
+    z-index: 1;
+}
+
+.banner {
+    height: 100%;
+    background-attachment: fixed;
+    background-image: url("../images/b_mini.jpg");
+    background-position: center center;
+    background-size: cover;
+    /*box-shadow: 0 0.25em 0.6em 0 rgba(0, 0, 0, 0.25);*/
+    text-align: center;
+    color: rgba(255, 255, 255, 0.95);
+    display: block;
+}
+
+.banner:after {
+    background-image: -moz-linear-gradient(top, rgba(28, 29, 38, 0.2), rgba(28, 24, 32, 0.6));
+    background-image: -webkit-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
+    background-image: -o-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
+    background-image: -ms-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
+    background-image: linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/*BANNER CONTENT*/
+
+.banner-image, .banner-text {
+    height: 100%;
+    position: relative;
+}
+
+.banner-image > img {
+    height: 100%;
+    max-height: 18em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 30px;
+    margin: auto;
+}
+
+.banner-text-content {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    max-width: 50%;
+    text-align: left;
+}
+
+.banner-text h1 {
+    font-size: 30pt;
+}
+
+.banner-text p {
+    font-size: 15pt;
+}
+
+/*NEXT-BUTTON*/
+
+.goto-down {
+    position: absolute;
+    height: 5em;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.goto-side {
+    display: table-cell;
+    height: 100%;
+    width: 4%;
+    /*min-width: 25px;
+    fixed table layout overrides
+    */
+    background: rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.goto-side:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.arrow i {
+    text-decoration: none;
+    color: white;
+    font-size: 30pt;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+/*FOOTER*/
+
+footer {
+    width: 980px;
+    max-width: 90%;
+    /* some wekbit browsers dont show bottom margin > using padding*/
+    margin: 60px auto 0 auto;
+    padding-bottom: 60px;
+}
+
+td:first-child {
+    text-align: center;
+    padding-right: 10px;
+    width: 19px;
+}
+td {
+    color: rgba(255,255,255,0.4);
+    font-size: 12pt;
+}
+
+td a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*CONTENTS*/
+
+.actualites {
+    background: #9cc6ff;
+}
+
+.elevage {
+    color: white;
+}
+
+.content-holder {
+    position: relative;
+    display: table;
+    width: 100%;
+    table-layout:fixed;
+}
+
+.content {
+    display: table-cell;
+    padding: 10px 2%;
+    overflow: hidden;
+    max-width: 80%;
+    position: relative;
+}
+
+article img {
+    width: 300px;
+    max-width: 80%;
+    max-height: 100%;
+}
+
+/*article p,*/
+article table {
+    overflow: hidden; /* Fix for firefox and IE 10-11  */
+    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+    page-break-inside: avoid; /* Deprecated Firefox */
+    -moz-column-break-inside:avoid; /* Current Firefox */
+    column-break-inside:avoid;
+    break-inside: avoid; /* IE 10+ */
+    break-inside: avoid-column;
+    margin: 0;
+}
+
+p + table, table + p {
+    margin-top: 10px;
+}
+
+.post-header h1 {
+    font-size: 18pt;
+    font-weight: 500;
+    font-family: "Roboto";
+    margin: 0;
+}
+
+.post-meta {
+    font-size: 12pt;
+    font-weight: 300;
+    font-family: "Roboto";
+    margin: 0;
+}
+
+.post-content {
+    -webkit-columns: 300px 3;
+    -moz-columns: 300px 3;
+    columns: 300px 3;
+    column-gap: 10%;
+    padding-top: 18px;
+}
+
+.collection {
+    margin: 8px 0 18px 0;
+}
+
+.collection-title {
+    font-size: 28pt;
+    font-weight: 300;
+    font-family: "Roboto";
+    margin-right: 10px;
+}
+
+.genealogie {
+    width: 100%;
+    /*max-width: 100%;*/
+}
+
+.genealogie td.c-cell {
+    border: 1px solid grey;
+    border-left-style: none;
+    border-right-style:none;
+    padding-left:3px;
+    padding-right:3px;
+    width:33.3%;
+    color: white;
+    text-align: left;
+}
+
+/*BREAKPOINTS*/
+
+@media screen and (max-width: 567px) {
+    .wrap-1 {
+        display: block;
+        height: 90%;
+        position: relative;
+    }
+
+    .wrap-2 {
+        display: block;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .banner-image, .banner-text {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner-image > img {
+        height: 5em;
+        max-height: 20%;
+        position: static;
+        margin: auto;
+    }
+
+    .banner-text-content {
+        position: static;
+        transform: none;
+        max-width: 90%;
+        z-index: 1;
+    }
+
+    .banner-text h1 {
+        font-size: 22pt;
+    }
+
+    .banner-text p {
+        font-size: 12pt;
+    }
+
+    .goto-next {
+        height: 10%;
+    }
+
+    .goto-side {
+        width: 25px;
+    }
+
+    footer {
+        margin: 20px auto;
+    }
+
+    footer table {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner-image > img {
+        max-height: 10em;
+        right: 0;
+        left:0;
+    }
+
+    .banner-text-content {
+        max-width: 90%;
+        left: 0;
+        margin: 0 5%;
+    }
+
+    .banner-text h1 {
+        font-size: 26pt;
+    }
+
+    .banner-text p {
+        font-size: 13pt;
+    }
+
+    .goto-next {
+        height: 10%;
+    }
+
+    footer {
+        margin: 20px auto;
+    }
+
+    footer table {
+        margin: 10px 0;
+    }
+}
