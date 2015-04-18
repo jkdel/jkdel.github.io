@@ -83,8 +83,11 @@ a, a:hover, a:active, a:focus {
 }
 
 .banner:after {
-    background-image: -webkit-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
-    background-image: linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
+    background: -webkit-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
+    background: -webkit-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
+    background: -o-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
+    background: -moz-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
+    background: linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
     content: '';
     display: block;
     height: 100%;
