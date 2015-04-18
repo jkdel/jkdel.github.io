@@ -74,7 +74,7 @@ a, a:hover, a:active, a:focus {
 .banner {
     height: 100%;
     background-attachment: scroll;
-    background-image: url("../images/b_mini.jpg");
+    background-image: url("/images/b_mini.jpg");
     background-position: center center;
     background-size: cover;
     text-align: center;

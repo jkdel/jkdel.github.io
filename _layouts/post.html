@@ -9,7 +9,7 @@
       <div class="wrap-1 pure-u-1 pure-g">
         <div class="wrap-2 pure-u-1 pure-g">
           <div class="pure-u-sm-1-2 pure-u-1 banner-image">
-            <img src="images/a.png">
+            <img src="/images/a.png">
           </div>
           <div class="pure-u-sm-1-2 pure-u-1 banner-text">
             <div class="banner-text-content">
@@ -25,29 +25,57 @@
         </div>
       </div>
     </div>
-    <article>
-    <header class="post-header">
-        <div class="collection"><span class="collection-title">{{ page.collection | replace: "actualites","Actualités" | replace: "elevage","Élevage" | replace: "a_vendre","À vendre" }}</span>
-        <span class="document-index">
-        {% for collection in site.collections %}
-            {% if collection[0] == page.collection %}
-                {% for document in collection[1].docs %}
-                    {% if page.url == document.url %}
-                        {{forloop.index}}/{{forloop.length}}
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-        {% endfor %}
-        </span>
+    <section class="content-holder">
+      <div class="goto-side ajp" id="{{ id_prefix }}-goto-left">
+        <div class="arrow">
+          {% for doc in page.collection.docs %}
+            {% assign col_len_m_2 = forloop.length | minus:2 %}
+            {% break %}
+          {% endfor %}
+          <a class="ajp" id="{{ id_prefix }}-arrow-left" href="{% for doc in page.collection.docs offset:col_len_m_2 limit:1 %}{{ doc.url }}{% endfor %}"><i class="fa fa-angle-left"></i></a>
         </div>
-        <h1 class="post-title">{{ page.title }}</h2>
-        <p class="post-meta">{{ page.date | date: "%d/%m/%Y" }}</p>
-    </header>
+      </div>
+      <div class="content" id="{{page.collection}}">
 
-    <div class="post-content">
-      {{ content }}
-    </div>
-    </article>
+        <article>
+        <header class="post-header">
+            <div class="collection"><span class="collection-title">{{ page.collection | replace: "actualites","Actualités" | replace: "elevage","Élevage" | replace: "a_vendre","À vendre" }}</span>
+            <span class="document-index">
+            {% for collection in site.collections %}
+                {% if collection[0] == page.collection %}
+                    {% for document in collection[1].docs %}
+                        {% if page.url == document.url %}
+                            {{forloop.index}}/{{forloop.length}}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+            </span>
+            </div>
+            <h1 class="post-title">{{ page.title }}</h2>
+            <p class="post-meta">{{ page.date | date: "%d/%m/%Y" }}</p>
+        </header>
+
+        <div class="post-content">
+          {{ content }}
+        </div>
+        </article>
+
+      </div>
+      <div class="goto-side ajn" id="{{ id_prefix }}-goto-right">
+        <div class="arrow">
+          {% for doc in page.collection.docs %}
+            {% if forloop.length == 1 %}
+              {% assign ref = nil %}
+            {% else %}
+              {% assign ref = page.collection.docs[0].url %}
+            {% endif %}
+            {% break %}
+          {% endfor %}
+          <a class="ajn" id="{{ id_prefix }}-arrow-right" href="{{ ref }}"><i class="fa fa-angle-right"></i></a>
+        </div>
+      </div>
+    </section>
     {% include footer.html %}
   </body>
 </html>
