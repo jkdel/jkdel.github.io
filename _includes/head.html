@@ -1,80 +1,119 @@
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Élevage de Theyssamy – Chevaux de sport, pensions, cours, compétition, balade">
-  <title>Élevage de Theyssamy</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <title>{% if page.title %}{{ page.title }} &mdash; {% endif %}Élevage de Theyssamy</title>
+  <link rel="alternate" type="application/atom+xml" title="Élevage de Theyssamy" href="{{ site.baseurl }}/feed.xml">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-  <!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
-  <!--<![endif]-->
-  <!--[if lte IE 8]>
-    <link rel="stylesheet" href="css/layouts/pricing-old-ie.css">
-  <![endif]-->
   <link rel="stylesheet" href="{{ site.baseurl }}/css/they.css">
   <link href='http://fonts.googleapis.com/css?family=Roboto:300,500' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
   <script>
-	var col = new Array();
-	{% for collection in site.collections %}
-		{% if collection[1].docs[0] %}
-			col.push({
-				name: "{{ collection[0] }}",
-				docs: {{ collection[1].docs | map: 'url' | jsonify }},
-				loaded: -1
-			});
-		{% endif %}
-	{% endfor %}
+
+    // define an array with collections and content
+    var col = new Array();
+    {% for collection in site.collections %}
+      {% if collection[1].docs[0] %}
+        {% capture id_prefix %}{{collection[0]}}-{{forloop.index | minus:1 }}{% endcapture %}
+        col.push({
+          name: "{{ collection[0] }}",
+          docs: {{ collection[1].docs | map: 'url' | jsonify }},
+          loaded: -1,
+          members_id: ["{{id_prefix}}-goto-left",
+                       "{{id_prefix}}-arrow-left",
+                       "{{id_prefix}}-goto-right",
+                       "{{id_prefix}}-arrow-right"]
+        });
+      {% endif %}
+    {% endfor %}
+
+
     function init() {
-    	for (var len = col.length, i=0; i<len; ++i) {
-    		loadXMLDoc(col[i].name,col[i].docs[col[i].docs.length-1]);
-    		col[i].loaded = col[i].docs.length-1;
-    	}
-    }
-    function loadXMLDoc(elem_id, source_url) {
-      var xmlhttp;
-      if (window.XMLHttpRequest) {
-        xmlhttp=new XMLHttpRequest();
-      } else {
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      // load contents on start (use jquery instead of liquid because only the article should be loaded)
+      for (var len = col.length, i=0; i<len; ++i) {
+        $("#"+col[i].name).load(col[i].docs[col[i].docs.length-1]+" article");
+        col[i].loaded = col[i].docs.length-1;
       }
-      xmlhttp.onreadystatechange=function() {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-          document.getElementById(elem_id).innerHTML=xmlhttp.responseText;
+    }
+
+    function update_arrows (len, collection_index) {
+      // update the anchors links vor navigation between articles of a collection
+      if (len == 0) {
+        document.getElementById(col[collection_index].members_id[1]).setAttribute("href",col[collection_index].docs[col[collection_index].docs.length-1]);
+        document.getElementById(col[collection_index].members_id[2]).setAttribute("href",col[collection_index].docs[1]);
+      } else {
+        document.getElementById(col[collection_index].members_id[1]).setAttribute("href",col[collection_index].docs[len-1]);
+        if (len == col[collection_index].docs.length-1) {
+          document.getElementById(col[collection_index].members_id[2]).setAttribute("href",col[collection_index].docs[0]);
+        } else {
+          document.getElementById(col[collection_index].members_id[2]).setAttribute("href",col[collection_index].docs[len+1]);
         }
       }
-      xmlhttp.open("GET","{{ site.baseurl }}"+source_url,true);
-      xmlhttp.send();
     }
-    function load_previous(collection_name) {
-    	for (var len = col.length, i=0; i<len; ++i) {
-    		if (col[i].name == collection_name && col[i].docs.length > 1) {
-    			if (col[i].loaded == 0) {
-		    		loadXMLDoc(col[i].name,col[i].docs[col[i].docs.length-1]);
-		    		col[i].loaded = col[i].docs.length-1;
-    			} else {
-		    		loadXMLDoc(col[i].name,col[i].docs[col[i].loaded-1]);
-		    		col[i].loaded = col[i].loaded-1;
-    			}
-    			break;
-    		}
-    	}
-    }
-    function load_next(collection_name) {
-    	for (var len = col.length, i=0; i<len; ++i) {
-    		if (col[i].name == collection_name && col[i].docs.length > 1) {
-    			if (col[i].loaded == col[i].docs.length-1) {
-		    		loadXMLDoc(col[i].name,col[i].docs[0]);
-		    		col[i].loaded = 0;
-    			} else {
-		    		loadXMLDoc(col[i].name,col[i].docs[col[i].loaded+1]);
-		    		col[i].loaded = col[i].loaded+1;
-    			}
-    			break;
-    		}
-    	}
-    }
+
+    // functions to load previous and next content
+    $(function() {
+      $('.ajp').click(function(e) {
+        e.stopPropagation()
+        e.preventDefault();
+        // identify collection
+        collection_index = $(this).attr("id").split("-")[1];
+        if (col[collection_index].docs.length > 1) {
+          // load content and update loaded
+          if (col[collection_index].loaded == 0) {
+            len = col[collection_index].docs.length-1;
+          } else {
+            len = col[collection_index].loaded-1;
+          }
+          href = col[collection_index].docs[len];
+          $("#"+col[collection_index].name).load(href+" article");
+          col[collection_index].loaded = len;
+
+          // update href of arrows
+          update_arrows(len, collection_index);
+
+          // update history
+          // history.pushState('', 'New URL: '+href, href);
+        }
+      });
+
+      $('.ajn').click(function(e) {
+        e.stopPropagation()
+        e.preventDefault();
+        // identify collection
+        collection_index = $(this).attr("id").split("-")[1];
+        if (col[collection_index].docs.length > 1) {
+          // load content and update loaded
+          if (col[collection_index].loaded == col[collection_index].docs.length-1) {
+            len = 0;
+          } else {
+            len = col[collection_index].loaded+1;
+          }
+          href = col[collection_index].docs[len];
+          $("#"+col[collection_index].name).load(href+" article")
+          col[collection_index].loaded = len;
+
+          // update href of arrows
+          update_arrows(len, collection_index);
+
+          // update history
+          // history.pushState('', 'New URL: '+href, href);
+        }
+
+      });
+      
+      // THIS EVENT MAKES SURE THAT THE BACK/FORWARD BUTTONS WORK AS WELL
+      // window.onpopstate = function(event) {
+        // console.log("pathname: "+location.pathname);
+        // identify section
+        // load corresponding content into this section
+      // };
+
+    });
+     
   </script>
 </head>

@@ -1,14 +1,17 @@
 html, body {
     height: 100%;
+    font-size: 100%;
+    margin: 0;
 }
 
 body {
     background: #1c1d26;
 }
 
-h1, h2, p, td {
+html, body, h1, h2, h3, p, td {
     font-family: "Roboto";
     font-weight: 300;
+    -webkit-font-smoothing: antialiased;
 }
 
 p {
@@ -19,10 +22,51 @@ strong {
   font-weight: 500;
 }
 
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+a, a:hover, a:active, a:focus {
+  outline: 0;
+}
+
+.pure-g {
+    display: -webkit-box;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+}
+.pure-u-1 {
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+    display: inline-block;
+    width: 100%
+}
+
+.pure-u-sm-1-2 {
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+    display: inline-block;
+    width: 50%;
+}
+
 /* BANNER */
 
 [class*="wrap"] {
     height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     z-index: 1;
 }
@@ -39,10 +83,7 @@ strong {
 }
 
 .banner:after {
-    background-image: -moz-linear-gradient(top, rgba(28, 29, 38, 0.2), rgba(28, 24, 32, 0.6));
     background-image: -webkit-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
-    background-image: -o-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
-    background-image: -ms-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
     background-image: linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
     content: '';
     display: block;
@@ -74,7 +115,9 @@ strong {
     position: absolute;
     top: 50%;
     left: 30px;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     max-width: 50%;
     text-align: left;
 }
@@ -85,49 +128,6 @@ strong {
 
 .banner-text p {
     font-size: 15pt;
-}
-
-/*NEXT-BUTTON*/
-
-.goto-down {
-    position: absolute;
-    height: 5em;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.goto-side {
-    display: table-cell;
-    height: 100%;
-    width: 4%;
-    background: rgba(0,0,0,0.1);
-    position: relative;
-}
-
-.goto-side:hover {
-    background: rgba(255,255,255,0.2);
-}
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    text-align: center;
-}
-
-.arrow i {
-    text-decoration: none;
-    color: white;
-    font-size: 30pt;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: default;
 }
 
 /*FOOTER*/
@@ -157,24 +157,24 @@ td a {
 
 /*CONTENTS*/
 
-.actualites {
-    background: #9cc6ff;
-}
-
-.elevage {
+section.content-holder:nth-child(2) {
     background: #fff;
 }
 
-.elevage .goto-side:hover {
-    background: rgba(0,0,0,0.2);
+section.content-holder:nth-child(2) .goto-side:hover {
+    background: rgba(0,0,0,0.3);
 }
 
-.elevage .genealogie td {
+section.content-holder:nth-child(2) .genealogie td {
     color: #000 !important;
 }
 
-.a_vendre {
+section.content-holder:nth-child(3) {
     color: white;
+}
+
+section.content-holder:nth-child(4) {
+    background: #9cc6ff;
 }
 
 .content-holder {
@@ -192,30 +192,31 @@ td a {
     position: relative;
 }
 
-article img {
+.post-content img {
     width: 300px;
     max-width: 80%;
     max-height: 100%;
 }
 
-/*article p,*/
-article table {
+.post-content table {
     overflow: hidden;
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     -moz-column-break-inside:avoid;
     column-break-inside:avoid;
     break-inside: avoid;
-    break-inside: avoid-column;
+    -webkit-column-break-inside: avoid;
+       page-break-inside: avoid;
+            break-inside: avoid-column;
     margin: 0;
 }
 
-article p {
+.post-content p {
     margin: 0;
     padding: 0;
 }
 
-p + table, table + p {
+.post-content p + table, .post-content table + p {
     margin-top: 10px;
 }
 
@@ -237,7 +238,9 @@ p + table, table + p {
     -webkit-columns: 300px 3;
     -moz-columns: 300px 3;
     columns: 300px 3;
-    column-gap: 10%;
+    -webkit-column-gap: 10%;
+       -moz-column-gap: 10%;
+            column-gap: 10%;
     padding-top: 18px;
 }
 
@@ -257,6 +260,53 @@ p + table, table + p {
     margin-right: 10px;
 }
 
+/*NEXT-BUTTON*/
+
+.goto-down {
+    position: absolute;
+    height: 5em;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.goto-side {
+    display: table-cell;
+    height: 100%;
+    width: 4%;
+    background: rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.goto-side:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.arrow i {
+    text-decoration: none;
+    color: white;
+    font-size: 30pt;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+/*GENEALOGIE*/
+
 .genealogie {
     width: 100%;
     /*max-width: 100%;*/
@@ -273,7 +323,18 @@ p + table, table + p {
     text-align: left;
 }
 
-/*BREAKPOINTS*/
+/*SCREEN SIZE*/
+
+@media screen and (min-width: 48em) {
+    .pure-u-md-1-3 {
+        letter-spacing: normal;
+        word-spacing: normal;
+        vertical-align: top;
+        text-rendering: auto;
+        display: inline-block;
+        width: 33.3333%;
+    }
+}
 
 @media screen and (max-width: 567px) {
     .wrap-1 {
@@ -287,7 +348,9 @@ p + table, table + p {
         height: auto;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
     }
 
     .banner-image, .banner-text {
@@ -304,7 +367,9 @@ p + table, table + p {
 
     .banner-text-content {
         position: static;
-        transform: none;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
         max-width: 90%;
         z-index: 1;
     }
@@ -326,7 +391,8 @@ p + table, table + p {
     }
 
     footer {
-        margin: 20px auto;
+        margin: 20px auto 0 auto;
+        padding-bottom: 20px;
     }
 
     footer table {
@@ -360,7 +426,8 @@ p + table, table + p {
     }
 
     footer {
-        margin: 20px auto;
+        margin: 20px auto 0 auto;
+        padding-bottom: 20px;
     }
 
     footer table {

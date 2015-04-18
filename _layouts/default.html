@@ -1,5 +1,8 @@
+---
+---
+
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   {% include head.html %}
   <body onload="init();">
     <div class="banner pure-g">
@@ -22,9 +25,8 @@
         </div>
       </div>
       <div class="goto-down pure-u-1">
-        <div class="arrow">
-        <!-- changer lien > vers footer si aucune collection ou aucune collection avec article, ou vers première collection avec article -->
-          <a href="#elevage"><i class="fa fa-angle-down"></i></a>
+        <div class="arrow">{% for collection in site.collections %}{% if collection[1].docs[0] %}{% assign col = collection[0] %}{% break %}{% endif %}{% endfor %}
+          <a href="#"{{col}}><i class="fa fa-angle-down"></i></a>
         </div>
       </div>
     </div>

@@ -4,19 +4,30 @@ layout: default
 
   {% for collection in site.collections %}
     {% if collection[1].docs[0] %}
-        <section class="{{collection[0]}} content-holder">
-          <div class="goto-side" onclick='load_previous("{{collection[0]}}");'>
+        {% capture id_prefix %}{{collection[0]}}-{{forloop.index | minus:1 }}{% endcapture %}
+        <section class="content-holder">
+          <div class="goto-side ajp" id="{{ id_prefix }}-goto-left">
             <div class="arrow">
-              <i class="fa fa-angle-left" onclick='load_previous("{{collection[0]}}");'></i>
+              {% for doc in collection[1].docs %}
+                {% assign col_len_m_2 = forloop.length | minus:2 %}
+                {% break %}
+              {% endfor %}
+              <a class="ajp" id="{{ id_prefix }}-arrow-left" href="{% for doc in collection[1].docs offset:col_len_m_2 limit:1 %}{{ doc.url }}{% endfor %}"><i class="fa fa-angle-left"></i></a>
             </div>
           </div>
-          <div class="content">
-            <div id="{{collection[0]}}">
-            </div>
+          <div class="content" id="{{collection[0]}}">
           </div>
-          <div class="goto-side" onclick='load_next("{{collection[0]}}");'>
+          <div class="goto-side ajn" id="{{ id_prefix }}-goto-right">
             <div class="arrow">
-              <i class="fa fa-angle-right" onclick='load_next("{{collection[0]}}");'></i>
+              {% for doc in collection[1].docs %}
+                {% if forloop.length == 1 %}
+                  {% assign ref = nil %}
+                {% else %}
+                  {% assign ref = collection[1].docs[0].url %}
+                {% endif %}
+                {% break %}
+              {% endfor %}
+              <a class="ajn" id="{{ id_prefix }}-arrow-right" href="{{ ref }}"><i class="fa fa-angle-right"></i></a>
             </div>
           </div>
         </section>
