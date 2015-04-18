@@ -36,4 +36,4 @@ As this is a one-page website the generated html files are not intended to be se
     +----------------------------------+
 
 
-The ajax loading mechanisme is intended to be crawlable.
+The ajax loading mechanism is intended to be crawlable.
