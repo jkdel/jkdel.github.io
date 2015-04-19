@@ -24,10 +24,8 @@
           </div>
         </div>
       </div>
-      <div class="goto-down pure-u-1">
-        <div class="arrow">{% for collection in site.collections %}{% if collection[1].docs[0] %}{% assign col = collection[0] %}{% break %}{% endif %}{% endfor %}
-          <a href="#"{{col}}><i class="fa fa-angle-down"></i></a>
-        </div>
+      <div class="goto-down pure-u-1">{% for collection in site.collections %}{% if collection[1].docs[0] %}{% assign col = collection[0] %}{% break %}{% endif %}{% endfor %}
+        <a class="arrow-d" href="#"{{col}}><i class="fa fa-angle-down"></i></a>
       </div>
     </div>
     {{ content }}

@@ -288,17 +288,31 @@ section.content-holder:nth-child(4) {
 .arrow {
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+    margin-top: -15pt;
+    height: 30pt;
     width: 100%;
+    font-size: 30pt;
+    text-decoration: none;
     text-align: center;
+    color: white;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
 }
 
-.arrow i {
-    text-decoration: none;
-    color: white;
+.arrow-d {
+    position: absolute;
+    top: 50%;
+    margin-top: -15pt;
+    height: 30pt;
     font-size: 30pt;
+    text-decoration: none;
+    text-align: center;
+    color: white;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
