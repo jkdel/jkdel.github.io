@@ -1,123 +1,21 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Élevage de Theyssamy – Chevaux de sport, pensions, cours, compétition, balade">
+  <meta name="description" content="{{site.description}}">
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <title>{% if page.title %}{{ page.title }} &mdash; {% endif %}Élevage de Theyssamy</title>
+  <title>{% if page.collection %}{{ page.collection | replace: "actualites","Actualités" | replace: "elevage","Élevage" | replace: "a_vendre","À vendre" }} &mdash; {% endif %}{{site.title}}</title>
   <link rel="alternate" type="application/atom+xml" title="Élevage de Theyssamy" href="{{ site.baseurl }}/feed.xml">
   <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/{% if page.css %}{{ page.css }}{% else %}they.css{% endif %}">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/they.css">
   <link href='http://fonts.googleapis.com/css?family=Roboto:300,500' rel='stylesheet' type='text/css'>
+  {% if page.url != "/404.html" %}
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
-  <script>
-
-    // define an array with collections and content
-    var col = new Array();
-    {% for collection in site.collections %}
-      {% if collection[1].docs[0] %}
-        {% capture id_prefix %}{{collection[0]}}-{{forloop.index | minus:1 }}{% endcapture %}
-        col.push({
-          name: "{{ collection[0] }}",
-          docs: {{ collection[1].docs | map: 'url' | jsonify }},
-          loaded: -1,
-          members_id: ["{{id_prefix}}-goto-left",
-                       "{{id_prefix}}-arrow-left",
-                       "{{id_prefix}}-goto-right",
-                       "{{id_prefix}}-arrow-right"]
-        });
-      {% endif %}
-    {% endfor %}
-
-
-    function init() {
-      // load contents on start (use jquery instead of liquid because only the article should be loaded)
-      for (var len = col.length, i=0; i<len; ++i) {
-        $("#"+col[i].name).load(col[i].docs[col[i].docs.length-1]+" article");
-        col[i].loaded = col[i].docs.length-1;
-      }
-    }
-
-    function update_arrows (len, collection_index) {
-      // update the anchors links vor navigation between articles of a collection
-      if (len == 0) {
-        document.getElementById(col[collection_index].members_id[1]).setAttribute("href",col[collection_index].docs[col[collection_index].docs.length-1]);
-        document.getElementById(col[collection_index].members_id[2]).setAttribute("href",col[collection_index].docs[1]);
-      } else {
-        document.getElementById(col[collection_index].members_id[1]).setAttribute("href",col[collection_index].docs[len-1]);
-        if (len == col[collection_index].docs.length-1) {
-          document.getElementById(col[collection_index].members_id[2]).setAttribute("href",col[collection_index].docs[0]);
-        } else {
-          document.getElementById(col[collection_index].members_id[2]).setAttribute("href",col[collection_index].docs[len+1]);
-        }
-      }
-    }
-
-    // functions to load previous and next content
-    $(function() {
-      $('.ajp').click(function(e) {
-        e.stopPropagation()
-        e.preventDefault();
-        // identify collection
-        collection_index = $(this).attr("id").split("-")[1];
-        if (col[collection_index].docs.length > 1) {
-          // load content and update loaded
-          if (col[collection_index].loaded == 0) {
-            len = col[collection_index].docs.length-1;
-          } else {
-            len = col[collection_index].loaded-1;
-          }
-          href = col[collection_index].docs[len];
-          $("#"+col[collection_index].name).load(href+" article");
-          col[collection_index].loaded = len;
-
-          // update href of arrows
-          update_arrows(len, collection_index);
-
-          // use this when url already different from baseurl
-          // (including when on a page like actualtites/0000-00-00-cir-st-lo.html)
-          // update history
-          // history.pushState('', 'New URL: '+href, href);
-        }
-      });
-
-      $('.ajn').click(function(e) {
-        e.stopPropagation()
-        e.preventDefault();
-        // identify collection
-        collection_index = $(this).attr("id").split("-")[1];
-        if (col[collection_index].docs.length > 1) {
-          // load content and update loaded
-          if (col[collection_index].loaded == col[collection_index].docs.length-1) {
-            len = 0;
-          } else {
-            len = col[collection_index].loaded+1;
-          }
-          href = col[collection_index].docs[len];
-          $("#"+col[collection_index].name).load(href+" article")
-          col[collection_index].loaded = len;
-
-          // update href of arrows
-          update_arrows(len, collection_index);
-
-          // use this when url already different from baseurl
-          // (including when on a page like actualtites/0000-00-00-cir-st-lo.html)
-          // update history
-          // history.pushState('', 'New URL: '+href, href);
-        }
-
-      });
-      
-      // THIS EVENT MAKES SURE THAT THE BACK/FORWARD BUTTONS WORK AS WELL
-      // window.onpopstate = function(event) {
-        // console.log("pathname: "+location.pathname);
-        // identify section
-        // load corresponding content into this section
-      // };
-
-    });
-     
+  <script type="text/javascript">
+  {% include common.js %}
+  {% if page.js %}{% include they_post.js %}
+  {% else %}{% include they.js %}{% endif %}
   </script>
+  {% endif %}
 </head>

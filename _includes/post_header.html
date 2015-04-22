@@ -1,15 +1,8 @@
----
----
-
-<!DOCTYPE html>
-<html lang="fr">
-  {% include head.html %}
-  <body onload="init();">
     <header class="banner pure-g">
       <div class="wrap-1 pure-u-1 pure-g">
         <div class="wrap-2 pure-u-1 pure-g">
           <div class="pure-u-sm-1-2 pure-u-1 banner-image">
-            <img src="/images/a_mini.png">
+            <img src="/images/a.png">
           </div>
           <div class="pure-u-sm-1-2 pure-u-1 banner-text">
             <div class="banner-text-content">
@@ -24,11 +17,4 @@
           </div>
         </div>
       </div>
-      <div class="goto-down pure-u-1">{% for collection in site.collections %}{% if collection[1].docs[0] %}{% assign col = collection[0] %}{% break %}{% endif %}{% endfor %}
-        <a class="arrow-d" href="#{{col}}"><i class="fa fa-angle-down"></i></a>
-      </div>
     </header>
-    {{ content }}
-    {% include footer.html %}
-  </body>
-</html>

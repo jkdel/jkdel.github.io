@@ -5,38 +5,33 @@
 <html>
   {% include head.html %}
   <body onload="init();">
-    <div class="banner pure-g">
-      <div class="wrap-1 pure-u-1 pure-g">
-        <div class="wrap-2 pure-u-1 pure-g">
-          <div class="pure-u-sm-1-2 pure-u-1 banner-image">
-            <img src="/images/a.png">
-          </div>
-          <div class="pure-u-sm-1-2 pure-u-1 banner-text">
-            <div class="banner-text-content">
-              <h1>
-                Élevage de Theyssamy
-              </h1>
-              <p>
-                «&nbsp;Être heureux à cheval, c'est être entre terre et ciel, à une hauteur qui n'existe pas.&nbsp;»<br>
-                &mdash;&nbsp;Jérôme Garcin.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <section class="content-holder">
+    {% include post_header.html %}
+    {% for collection in site.collections %}
+      {% if collection[0] == page.collection %}
+        {% capture id_prefix %}{{ page.collection }}-{{forloop.index | minus:1 }}{% endcapture %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    <div class="content-holder">
       <div class="goto-side ajp" id="{{ id_prefix }}-goto-left">
-        <div class="arrow">
-          {% for doc in page.collection.docs %}
-            {% assign col_len_m_2 = forloop.length | minus:2 %}
-            {% break %}
-          {% endfor %}
-          <a class="ajp" id="{{ id_prefix }}-arrow-left" href="{% for doc in page.collection.docs offset:col_len_m_2 limit:1 %}{{ doc.url }}{% endfor %}"><i class="fa fa-angle-left"></i></a>
-        </div>
+        {% for collection in site.collections %}
+          {% if collection[0] == page.collection %}
+            {% for doc in collection[1].docs %}
+              {% if doc.title == page.title %}
+                {% if forloop.index == 1 %}
+                  {% assign new_ind = forloop.length | minus:1 %}
+                {% else %}
+                  {% assign new_ind = forloop.index | minus:2 %}
+                {% endif %}
+                {% assign new_url = collection[1].docs[new_ind].url %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+        <a class="arrow ajp" id="{{ id_prefix }}-arrow-left" href="{{new_url}}"><i class="fa fa-angle-left"></i></a>
       </div>
       <div class="content" id="{{page.collection}}">
-
         <article>
         <header class="post-header">
             <div class="collection"><span class="collection-title">{{ page.collection | replace: "actualites","Actualités" | replace: "elevage","Élevage" | replace: "a_vendre","À vendre" }}</span>
@@ -55,27 +50,30 @@
             <h1 class="post-title">{{ page.title }}</h2>
             <p class="post-meta">{{ page.date | date: "%d/%m/%Y" }}</p>
         </header>
-
         <div class="post-content">
           {{ content }}
         </div>
         </article>
-
       </div>
       <div class="goto-side ajn" id="{{ id_prefix }}-goto-right">
-        <div class="arrow">
-          {% for doc in page.collection.docs %}
-            {% if forloop.length == 1 %}
-              {% assign ref = nil %}
-            {% else %}
-              {% assign ref = page.collection.docs[0].url %}
-            {% endif %}
-            {% break %}
-          {% endfor %}
-          <a class="ajn" id="{{ id_prefix }}-arrow-right" href="{{ ref }}"><i class="fa fa-angle-right"></i></a>
-        </div>
+        {% for collection in site.collections %}
+          {% if collection[0] == page.collection %}
+            {% for doc in collection[1].docs %}
+              {% if doc.title == page.title %}
+                {% if forloop.index == forloop.length %}
+                  {% assign new_ind = 0 %}
+                {% else %}
+                  {% assign new_ind = forloop.index %}
+                {% endif %}
+                {% assign new_url = collection[1].docs[new_ind].url %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+        <a class="arrow ajn" id="{{ id_prefix }}-arrow-right" href="{{new_url}}"><i class="fa fa-angle-right"></i></a>
       </div>
-    </section>
+    </div>
     {% include footer.html %}
   </body>
 </html>
