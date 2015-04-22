@@ -397,12 +397,12 @@ div.content-holder:nth-child(4) {
     }
 
     .banner-image, .banner-text {
-        width: 100%;
+        width: 90%;
         height: auto;
     }
 
     .banner-image > img {
-        height: 5em;
+        height: 7em;
         max-height: 20%;
         position: static;
         margin: auto;
