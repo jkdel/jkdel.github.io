@@ -351,7 +351,7 @@ div.content-holder:nth-child(4) {
 @media only screen and (max-height: 767px) {
     .banner { background-image: url("/images/b_m.jpg"); }
 }
-@media only screen and (max-height: 1281px) {
+@media only screen and (min-height: 1281px) {
     .banner { background-image: url("/images/b_m@2x.jpg"); }
 }
 
@@ -364,7 +364,7 @@ div.content-holder:nth-child(4) {
     .banner { background-image: url("/images/b_m@2x.jpg"); }
 }
 /*l*/
-@media only screen and (min-resolution: 2dppx) and (max-height: 768px) {
+@media only screen and (min-resolution: 2dppx) and (min-height: 768px) {
     .banner { background-image: url("/images/b_l@2x.jpg"); }
 }
 
