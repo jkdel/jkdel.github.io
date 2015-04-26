@@ -11,7 +11,7 @@ layout: default
               {% assign col_len_m_2 = forloop.length | minus:2 %}
               {% break %}
             {% endfor %}
-            <a class="arrow ajp" id="{{ id_prefix }}-arrow-left" href="{% for doc in collection[1].docs offset:col_len_m_2 limit:1 %}{{ doc.url }}{% endfor %}"><i class="fa fa-angle-left"></i></a>
+            <a title="Article précédent" class="arrow ajp" id="{{ id_prefix }}-arrow-left" href="{% for doc in collection[1].docs offset:col_len_m_2 limit:1 %}{{ doc.url }}{% endfor %}"><i class="fa fa-angle-left"></i></a>
           </div>
           <div class="content" id="{{collection[0]}}">
           </div>
@@ -24,7 +24,7 @@ layout: default
               {% endif %}
               {% break %}
             {% endfor %}
-            <a class="arrow ajn" id="{{ id_prefix }}-arrow-right" href="{{ ref }}"><i class="fa fa-angle-right"></i></a>
+            <a title="Article suivant" class="arrow ajn" id="{{ id_prefix }}-arrow-right" href="{{ ref }}"><i class="fa fa-angle-right"></i></a>
           </div>
         </div>
     {% endif %}
