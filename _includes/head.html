@@ -3,22 +3,26 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <title>{% if page.collection %}{{ page.collection | replace: "actualites","Actualités" | replace: "elevage","Élevage" | replace: "a_vendre","À vendre" }} &mdash; {% endif %}{{site.title}}</title>
 
-  <!-- <meta property="fb:admins" content="728642302">
-  <meta property="fb:app_id" content="38027689216"> -->
+  <meta property="fb:app_id" content="1654936101409021">
   {% if page.title %}
+  <title>{{ page.title }} &mdash; {{site.title}}</title>
   <meta property="og:title" content="{{ page.title }}">
-    {% if page.description %}
-    <meta name="description" content="{{ page.description }}">
-    <meta name="og:description" content="{{ page.description }}">
-    {% else if content %}
-    <meta name="description" content="{{ content | strip_html | truncatewords: 25 }}">
-    <meta name="og:description" content="{{ content | strip_html | truncatewords: 25 }}">
-    {% endif %}
   {% else %}
-    <meta name="description" content="{{site.description}}">
+  <title>{{site.title}}</title>
+  <meta property="og:title" content="{{ site.title }}">
   {% endif %}
+
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  <meta name="og:description" content="{{ page.description }}">
+  {% else if content %}
+  <meta name="description" content="{{ content | strip_html | truncatewords: 25 }}">
+  <meta name="og:description" content="{{ content | strip_html | truncatewords: 25 }}">
+  {% else %}
+  <meta name="description" content="{{site.description}}">
+  {% endif %}
+
   <meta property="og:image" content="{{site.url}}/images/t.jpg">
   {% if page.og_image_url %}
   <!-- <meta property="og:image" content="{{ page.og_image_url }}"> -->
