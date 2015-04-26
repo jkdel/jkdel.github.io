@@ -29,7 +29,7 @@
             {% endfor %}
           {% endif %}
         {% endfor %}
-        <a class="arrow ajp" id="{{ id_prefix }}-arrow-left" href="{{new_url}}"><i class="fa fa-angle-left"></i></a>
+        <a class="arrow ajp" title="Article précédent" id="{{ id_prefix }}-arrow-left" href="{{new_url}}"><i class="fa fa-angle-left"></i></a>
       </div>
       <div class="content" id="{{page.collection}}">
         <article>
@@ -71,7 +71,7 @@
             {% endfor %}
           {% endif %}
         {% endfor %}
-        <a class="arrow ajn" id="{{ id_prefix }}-arrow-right" href="{{new_url}}"><i class="fa fa-angle-right"></i></a>
+        <a class="arrow ajn" title="Article suivant" id="{{ id_prefix }}-arrow-right" href="{{new_url}}"><i class="fa fa-angle-right"></i></a>
       </div>
     </div>
     {% include footer.html %}
