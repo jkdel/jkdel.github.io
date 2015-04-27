@@ -12,68 +12,70 @@
         {% break %}
       {% endif %}
     {% endfor %}
-    <div class="content-holder">
-      <div class="goto-side ajp" id="{{ id_prefix }}-goto-left">
-        {% for collection in site.collections %}
-          {% if collection[0] == page.collection %}
-            {% for doc in collection[1].docs %}
-              {% if doc.title == page.title %}
-                {% if forloop.index == 1 %}
-                  {% assign new_ind = forloop.length | minus:1 %}
-                {% else %}
-                  {% assign new_ind = forloop.index | minus:2 %}
+    <table class="content-holder">
+      <tr>
+        <td class="goto-side ajp" id="{{ id_prefix }}-goto-left">
+          {% for collection in site.collections %}
+            {% if collection[0] == page.collection %}
+              {% for doc in collection[1].docs %}
+                {% if doc.title == page.title %}
+                  {% if forloop.index == 1 %}
+                    {% assign new_ind = forloop.length | minus:1 %}
+                  {% else %}
+                    {% assign new_ind = forloop.index | minus:2 %}
+                  {% endif %}
+                  {% assign new_url = collection[1].docs[new_ind].url %}
+                  {% break %}
                 {% endif %}
-                {% assign new_url = collection[1].docs[new_ind].url %}
-                {% break %}
-              {% endif %}
-            {% endfor %}
-          {% endif %}
-        {% endfor %}
-        <a class="arrow ajp" title="Article précédent" id="{{ id_prefix }}-arrow-left" href="{{new_url}}"><i class="fa fa-angle-left"></i></a>
-      </div>
-      <div class="content" id="{{page.collection}}">
-        <article>
-        <header class="post-header">
-            <div class="collection"><span class="collection-title">{{ page.collection | replace: "actualites","Actualités" | replace: "elevage","Élevage" | replace: "a_vendre","À vendre" }}</span>
-            <span class="document-index">
-            {% for collection in site.collections %}
-                {% if collection[0] == page.collection %}
-                    {% for document in collection[1].docs %}
-                        {% if page.url == document.url %}
-                            {{forloop.index}}/{{forloop.length}}
-                        {% endif %}
-                    {% endfor %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+          <a class="arrow ajp" title="Article précédent" id="{{ id_prefix }}-arrow-left" href="{{new_url}}"><i class="fa fa-angle-left"></i></a>
+        </td>
+        <td class="content" id="{{page.collection}}">
+          <article>
+          <header class="post-header">
+              <div class="collection"><span class="collection-title">{{ page.collection | replace: "actualites","Actualités" | replace: "elevage","Élevage" | replace: "a_vendre","À vendre" }}</span>
+              <span class="document-index">
+              {% for collection in site.collections %}
+                  {% if collection[0] == page.collection %}
+                      {% for document in collection[1].docs %}
+                          {% if page.url == document.url %}
+                              {{forloop.index}}/{{forloop.length}}
+                          {% endif %}
+                      {% endfor %}
+                  {% endif %}
+              {% endfor %}
+              </span>
+              </div>
+              <h1 class="post-title">{{ page.title }}</h1>
+              <p class="post-meta">{{ page.date | date: "%d/%m/%Y" }}</p>
+          </header>
+          <div class="post-content">
+            {{ content }}
+          </div>
+          </article>
+        </td>
+        <td class="goto-side ajn" id="{{ id_prefix }}-goto-right">
+          {% for collection in site.collections %}
+            {% if collection[0] == page.collection %}
+              {% for doc in collection[1].docs %}
+                {% if doc.title == page.title %}
+                  {% if forloop.index == forloop.length %}
+                    {% assign new_ind = 0 %}
+                  {% else %}
+                    {% assign new_ind = forloop.index %}
+                  {% endif %}
+                  {% assign new_url = collection[1].docs[new_ind].url %}
+                  {% break %}
                 {% endif %}
-            {% endfor %}
-            </span>
-            </div>
-            <h1 class="post-title">{{ page.title }}</h1>
-            <p class="post-meta">{{ page.date | date: "%d/%m/%Y" }}</p>
-        </header>
-        <div class="post-content">
-          {{ content }}
-        </div>
-        </article>
-      </div>
-      <div class="goto-side ajn" id="{{ id_prefix }}-goto-right">
-        {% for collection in site.collections %}
-          {% if collection[0] == page.collection %}
-            {% for doc in collection[1].docs %}
-              {% if doc.title == page.title %}
-                {% if forloop.index == forloop.length %}
-                  {% assign new_ind = 0 %}
-                {% else %}
-                  {% assign new_ind = forloop.index %}
-                {% endif %}
-                {% assign new_url = collection[1].docs[new_ind].url %}
-                {% break %}
-              {% endif %}
-            {% endfor %}
-          {% endif %}
-        {% endfor %}
-        <a class="arrow ajn" title="Article suivant" id="{{ id_prefix }}-arrow-right" href="{{new_url}}"><i class="fa fa-angle-right"></i></a>
-      </div>
-    </div>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+          <a class="arrow ajn" title="Article suivant" id="{{ id_prefix }}-arrow-right" href="{{new_url}}"><i class="fa fa-angle-right"></i></a>
+        </td>
+      </tr>
+    </table>
     {% include footer.html %}
 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
