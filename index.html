@@ -5,27 +5,29 @@ layout: default
   {% for collection in site.collections %}
     {% if collection[1].docs[0] %}
         {% capture id_prefix %}{{collection[0]}}-{{forloop.index | minus:1 }}{% endcapture %}
-        <div class="content-holder">
-          <div class="goto-side ajp" id="{{ id_prefix }}-goto-left">
-            {% for doc in collection[1].docs %}
-              {% assign col_len_m_2 = forloop.length | minus:2 %}
-              {% break %}
-            {% endfor %}
-            <a title="Article précédent" class="arrow ajp" id="{{ id_prefix }}-arrow-left" href="{% for doc in collection[1].docs offset:col_len_m_2 limit:1 %}{{ doc.url }}{% endfor %}"><i class="fa fa-angle-left"></i></a>
-          </div>
-          <div class="content" id="{{collection[0]}}">
-          </div>
-          <div class="goto-side ajn" id="{{ id_prefix }}-goto-right">
-            {% for doc in collection[1].docs %}
-              {% if forloop.length == 1 %}
-                {% assign ref = nil %}
-              {% else %}
-                {% assign ref = collection[1].docs[0].url %}
-              {% endif %}
-              {% break %}
-            {% endfor %}
-            <a title="Article suivant" class="arrow ajn" id="{{ id_prefix }}-arrow-right" href="{{ ref }}"><i class="fa fa-angle-right"></i></a>
-          </div>
-        </div>
+        <table class="content-holder">
+          <tr>
+            <td class="goto-side ajp" id="{{ id_prefix }}-goto-left">
+              {% for doc in collection[1].docs %}
+                {% assign col_len_m_2 = forloop.length | minus:2 %}
+                {% break %}
+              {% endfor %}
+              <a title="Article précédent" class="arrow ajp" id="{{ id_prefix }}-arrow-left" href="{% for doc in collection[1].docs offset:col_len_m_2 limit:1 %}{{ doc.url }}{% endfor %}"><i class="fa fa-angle-left"></i></a>
+            </td>
+            <td class="content" id="{{collection[0]}}">
+            </td>
+            <td class="goto-side ajn" id="{{ id_prefix }}-goto-right">
+              {% for doc in collection[1].docs %}
+                {% if forloop.length == 1 %}
+                  {% assign ref = nil %}
+                {% else %}
+                  {% assign ref = collection[1].docs[0].url %}
+                {% endif %}
+                {% break %}
+              {% endfor %}
+              <a title="Article suivant" class="arrow ajn" id="{{ id_prefix }}-arrow-right" href="{{ ref }}"><i class="fa fa-angle-right"></i></a>
+            </td>
+          </tr>
+        </table>
     {% endif %}
   {% endfor %}
