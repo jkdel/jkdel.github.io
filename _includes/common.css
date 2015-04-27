@@ -345,6 +345,7 @@ div.content-holder:nth-child(4) {
 .arrow-d {
     width: auto;
     position: relative;
+    top: 25px;
 }
 
 /*GENEALOGIE*/
