@@ -29,7 +29,7 @@ table {
 
 a.banner-post-a,
 a.arrow, a.arrow:hover, a.arrow:active, a.arrow:focus,
-a.arrow-d, a.arrow-d:hover, a.arrow-d:active, a.arrow-d:focus {
+a.arrow-d, a.arrow-d:hover, a.arrow-d:active, a.arrow-d:focus, i {
     outline: 0;
     text-decoration: none;
     text-align: center;
