@@ -93,11 +93,12 @@ a.arrow-d, a.arrow-d:hover, a.arrow-d:active, a.arrow-d:focus {
     display: block;
 }
 
-.banner::after {
+.banner:after {
     background: -webkit-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
     background: -webkit-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
     background: -o-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
     background: -moz-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
+    background: -ms-linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
     background: linear-gradient(top, rgba(28, 24, 32, 0.2), rgba(28, 24, 32, 0.6));
     content: '';
     display: block;
@@ -319,12 +320,11 @@ table.content-holder:nth-child(4) {
 }
 
 .goto-side {
-    /*display: table-cell;*/
-    /*height: 100%;*/
     width: 4%;
     background: rgba(0,0,0,0.1);
     position: relative;
     cursor: pointer;
+    vertical-align: middle;
 }
 
 .goto-side:hover {
@@ -332,17 +332,16 @@ table.content-holder:nth-child(4) {
 }
 
 .arrow, .arrow-d {
-    position: absolute;
-    top: 50%;
-    margin-top: -15pt;
-    height: 30pt;
-    width: 100%;
+    position: relative;
+    left: 50%;
+    margin-left: -7px;
     font-size: 30pt;
 }
 
 .arrow-d {
-    width: auto;
-    position: relative;
+    margin-left: 0;
+    left: 0;
+    height: 30pt;
     top: 25px;
 }
 
