@@ -81,13 +81,12 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Roboto:300,500' rel='stylesheet' type='text/css'>
   {% if page.url != "/404.html" %}
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script type="text/javascript">
   {% include common.js %}
   {% if page.js %}{% include they_post.js %}
   {% else %}{% include they.js %}{% endif %}
   </script>
   {% endif %}
-
   </body>
 </html>

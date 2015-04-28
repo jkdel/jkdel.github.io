@@ -15,9 +15,9 @@
 	}
 
 	function init() {
-		[i,j] = identify();
-		col[i].loaded = j;
-	}		
+		ij = identify();
+		col[ij[0]].loaded = ij[1];
+	}
 
 	function push_state(href) {
 		history.pushState('', 'New URL: '+href, href);
@@ -27,3 +27,16 @@
 		[i,j] = identify();
 		load_and_update(j,i);
 	}
+
+	function load_and_update(len, collection_index) {
+      if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
+        col[collection_index].loaded = len;
+        window.location = col[collection_index].docs[len];
+      } else {
+        href = col[collection_index].docs[len];
+        $("#"+col[collection_index].name).load(href+" article");
+        col[collection_index].loaded = len;
+        update_arrows(len, collection_index);
+        push_state(href);
+      }
+    }

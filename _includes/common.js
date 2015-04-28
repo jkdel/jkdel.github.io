@@ -26,14 +26,6 @@
       }
     }
 
-    function load_and_update(len, collection_index) {
-      href = col[collection_index].docs[len];
-      $("#"+col[collection_index].name).load(href+" article");
-      col[collection_index].loaded = len;
-      update_arrows(len, collection_index);
-      push_state(href);
-    }
-
     // functions to load previous and next content
     $(function() {
       $('.ajp').click(function(e) {
