@@ -1,8 +1,8 @@
-	function init() {
+	$(document).ready(function() {
 	  for (var len = col.length, i=0; i<len; ++i) {
 	    col[i].loaded = col[i].docs.length-1;
 	  }
-	}
+	});
 
 	function back_to_state(event) {
 		null;
