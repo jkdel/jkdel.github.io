@@ -42,7 +42,6 @@
             len = col[collection_index].loaded-1;
           }
           load_and_update(len, collection_index);
-          console.log(col[collection_index].titles[len]);
         }
       });
 

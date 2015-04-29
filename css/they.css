@@ -98,7 +98,7 @@ a.arrow-d, a.arrow-d:hover, a.arrow-d:active, a.arrow-d:focus, i {
     background-position: center center;
     background-size: cover;
     text-align: center;
-    color: rgba(255, 255, 255, 0.95);
+    color: white;
     display: block;
 }
 
@@ -178,9 +178,9 @@ a.arrow-d, a.arrow-d:hover, a.arrow-d:active, a.arrow-d:focus, i {
 footer {
     width: 980px;
     max-width: 90%;
-    /* some wekbit browsers dont show bottom margin > using padding*/
     margin: 60px auto 0 auto;
     padding-bottom: 60px;
+    color: grey;
 }
 
 footer table {
@@ -193,12 +193,15 @@ footer td:first-child {
     width: 19px;
 }
 footer td {
-    color: rgba(255,255,255,0.4);
     font-size: 12pt;
 }
 
 footer td a {
     text-decoration: none;
+    color: inherit;
+}
+
+footer td i {
     color: inherit;
 }
 
