@@ -14,18 +14,18 @@
 		return [i,j];
 	}
 
-	function init() {
+	$(document).ready(function() {
 		ij = identify();
 		col[ij[0]].loaded = ij[1];
-	}
+	});
 
 	function push_state(href) {
 		history.pushState('', 'New URL: '+href, href);
 	}
 
 	function back_to_state(event) {
-		[i,j] = identify();
-		load_and_update(j,i);
+		ij = identify();
+		load_and_update(ij[1],ij[0]);
 	}
 
 	function load_and_update(len, collection_index) {
