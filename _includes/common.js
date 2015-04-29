@@ -4,6 +4,7 @@
     col.push({
       name: "{{ collection[0] }}",
       docs: {{ collection[1].docs | map: 'url' | jsonify }},
+      titles: {{ collection[1].docs | map: 'title' | jsonify }},
       loaded: -1,
       members_id: ["{{id_prefix}}-goto-left",
                    "{{id_prefix}}-arrow-left",
@@ -41,6 +42,7 @@
             len = col[collection_index].loaded-1;
           }
           load_and_update(len, collection_index);
+          console.log(col[collection_index].titles[len]);
         }
       });
 

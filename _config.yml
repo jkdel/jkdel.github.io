@@ -28,21 +28,18 @@ defaults:
       type: "elevage"
     values:
       layout: "post"
-      css: "they_post.css"
       js: "they_post.js"
   -
     scope:
       type: "a_vendre"
     values:
       layout: "post"
-      css: "they_post.css"
       js: "they_post.js"
   -
     scope:
       type: "actualites"
     values:
       layout: "post"
-      css: "they_post.css"
       js: "they_post.js"
 
 gems:

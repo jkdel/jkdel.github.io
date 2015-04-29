@@ -38,5 +38,9 @@
         col[collection_index].loaded = len;
         update_arrows(len, collection_index);
         push_state(href);
+        ga('send', 'pageview', {
+          'page': href,
+          'title': col[collection_index].titles[len]
+        });
       }
     }

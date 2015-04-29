@@ -1,6 +1,7 @@
 ---
 date: 2014-05-01 21:11:00 UTC
 title: Grande Semaine de l'Elevage
+description: Avec une première place dans le 6 ans et une troisième place dans les 4 ans, l'élevage de Theyssamy c'est bien classé durant la grande semaine à Fontainebleau.
 ---
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
