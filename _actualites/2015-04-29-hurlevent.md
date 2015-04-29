@@ -2,7 +2,7 @@
 date: 2015-04-29 21:28:00 UTC
 title: Damoiseau de Theyssamy
 description: Avec une première place dans le 6 ans et une troisième place dans les 4 ans, l'élevage de Theyssamy c'est bien classé durant la grande semaine à Fontainebleau.
-page_og_image_url: /images/art_a.jpg
+og_image_url: /images/art_a.jpg
 ---
 
 Damoiseau de Theyssamy a pour père **Mot clé strong > important**, un très jeune étalon. Ce pari audacieux s'appuie sur la très bonne saison des 4 ans et la deuxième place au concours des étalons de ce produit d'**Hurlevent de Breka**. La mère **Hawai de Theyssamy** a entre autre produit **Une Star de Theyssamy** (ISO 115 a 4 ans, finaliste en cycle classique à 4 et 5 ans) et est le fruit de **Quatoubet du Rouet** et Iberica par Mexico.
