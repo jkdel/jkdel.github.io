@@ -87,6 +87,7 @@ a.arrow-d, a.arrow-d:hover, a.arrow-d:active, a.arrow-d:focus, i {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    z-index: 1;
 }
 
 .banner {
