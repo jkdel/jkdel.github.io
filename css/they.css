@@ -5,9 +5,6 @@ html, body {
     height: 100%;
     font-size: 100%;
     margin: 0;
-}
-
-body {
     background: #1c1d26;
 }
 
@@ -28,6 +25,7 @@ strong {
 table {
     border-collapse: collapse;
     border-spacing: 0px;
+    table-layout: fixed;
 }
 
 img {
@@ -83,13 +81,12 @@ a.arrow-d, a.arrow-d:hover, a.arrow-d:active, a.arrow-d:focus, i {
 
 /* BANNER */
 
-[class*="wrap"] {
+.wrap-1, .wrap-2 {
     height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    z-index: 1;
 }
 
 .banner {
@@ -157,11 +154,7 @@ a.arrow-d, a.arrow-d:hover, a.arrow-d:active, a.arrow-d:focus, i {
     font-size: 15pt;
 }
 
-.banner-post {
-    height: 300px;
-}
-
-.banner-post:after {
+.banner-post, .banner-post:after {
     height: 300px;
 }
 
@@ -183,15 +176,12 @@ footer {
     color: grey;
 }
 
-footer table {
-    table-layout: fixed;
-}
-
 footer td:first-child {
     text-align: center;
     padding-right: 10px;
     width: 19px;
 }
+
 footer td {
     font-size: 12pt;
 }
@@ -220,7 +210,7 @@ table.content-holder:nth-child(2) .goto-side:hover {
 }
 
 table.content-holder:nth-child(2) .genealogie td {
-    color: #000 !important;
+    color: #000;
 }
 
 table.content-holder:nth-child(3) {
@@ -236,7 +226,7 @@ table.content-holder:nth-child(4) .genealogie td {
 }
 
 table.content-holder:nth-child(4) .genealogie td.c-cell {
-    border: 1px solid #000;
+    border: 1px solid #354457;
     border-left-style: none;
     border-right-style:none;
 }
@@ -244,7 +234,6 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
 .content-holder {
     position: relative;
     width: 100%;
-    table-layout:fixed;
 }
 
 .content {
@@ -376,7 +365,6 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
 .genealogie {
     width: 100%;
     max-width: 600px;
-    table-layout: fixed;
 }
 
 .genealogie td.c-cell {
@@ -389,7 +377,6 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
     color: white;
     text-align: left;
 }
-
 
 /*SCREEN SIZE*/
 
@@ -417,17 +404,6 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
 /*l*/
 @media only screen and (min-resolution: 2dppx) and (min-height: 768px) {
     .banner { background-image: url("/images/b_l@2x.jpg"); }
-}
-
-@media screen and (min-width: 48em) {
-    .pure-u-md-1-3 {
-        letter-spacing: normal;
-        word-spacing: normal;
-        vertical-align: top;
-        text-rendering: auto;
-        display: inline-block;
-        width: 33.3333%;
-    }
 }
 
 @media screen and (max-width: 567px) {
@@ -476,6 +452,15 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
         font-size: 12pt;
     }
 
+
+    .banner-post-image > img {
+        height: 7em;
+        max-height: 20%;
+    }
+}
+
+
+@media screen and (min-width: 767px) {
     .goto-next {
         height: 10%;
     }
@@ -499,11 +484,6 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
 
     .banner-post:after {
         height: 100%;
-    }
-
-    .banner-post-image > img {
-        height: 7em;
-        max-height: 20%;
     }
 }
 
@@ -526,32 +506,18 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
         font-size: 13pt;
     }
 
-    .goto-next {
-        height: 10%;
-    }
-
-    .goto-side {
-        width: 30px;
-    }
-
-    footer {
-        margin: 20px auto 0 auto;
-        padding-bottom: 20px;
-    }
-
-    footer table {
-        margin: 10px 0;
-    }
-
-    .banner-post {
-        height: 100%;
-    }
-
-    .banner-post:after {
-        height: 100%;
-    }
-
     .banner-post-image > img {
         max-height: 10em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .pure-u-md-1-3 {
+        letter-spacing: normal;
+        word-spacing: normal;
+        vertical-align: top;
+        text-rendering: auto;
+        display: inline-block;
+        width: 33.3333%;
     }
 }
