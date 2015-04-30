@@ -461,7 +461,7 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
 }
 
 
-@media screen and (min-width: 767px) {
+@media screen and (max-width: 767px) {
     .goto-next {
         height: 10%;
     }
