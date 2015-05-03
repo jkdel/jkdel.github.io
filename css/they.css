@@ -246,6 +246,10 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
     max-height: 100%;
 }
 
+.post-content .gallery img {
+    width: auto;
+}
+
 .post-content table {
     overflow: hidden;
     -webkit-column-break-inside: avoid;
@@ -259,9 +263,21 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
     margin: 0;
 }
 
-.post-content p {
+.post-content p, .post-content dl {
     margin: 0;
     padding: 0;
+}
+
+dt {
+    font-weight: 500;
+}
+
+dt + dd {
+    margin-top: 10px;
+}
+
+dd + dt {
+    margin-top: 20px;
 }
 
 .post-content iframe {
@@ -270,7 +286,7 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
     height: 315px;
 }
 
-.post-content p + table, .post-content table + p, .post-content iframe + p, .post-content p + iframe {
+.post-content p + table, .post-content table + p, .post-content iframe + p, .post-content p + iframe, .post-content iframe + dl, .post-content dl + iframe {
     margin-top: 10px;
 }
 
@@ -289,13 +305,16 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
 }
 
 .post-content {
+    padding-top: 18px;
+}
+
+.post-content.post-column {
     -webkit-columns: 420px 3;
     -moz-columns: 420px 3;
     columns: 420px 3;
     -webkit-column-gap: 10%;
        -moz-column-gap: 10%;
             column-gap: 10%;
-    padding-top: 18px;
 }
 
 .document-index {

@@ -28,7 +28,7 @@ layout: default
                   <h1 class="post-title">{{ collection[1].docs.last.title }}</h1>
                   <p class="post-meta">{{ collection[1].docs.last.date | date: "%d/%m/%Y" }}</p>
               </header>
-              <div class="post-content">
+              <div class="post-content{% unless collection[1].docs.last.nocolumn %} post-column {% endunless %}">
                 {{ collection[1].docs.last.content }}
               </div>
               </article>
