@@ -274,6 +274,7 @@ dt {
 
 dt + dd {
     margin-top: 10px;
+    line-height: 1.6em;
 }
 
 dd + dt {
