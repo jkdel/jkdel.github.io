@@ -27,6 +27,28 @@
       }
     }
 
+    function load_gallery() {
+        $('.gallery').each(function() {
+            $(this).magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Chargement...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                  enabled: true,
+                  navigateByImgClick: true,
+                  preload: [0,1],
+                  tPrev: 'Précédent',
+                  tNext: 'Suivant',
+                  tCounter: '<span class="mfp-counter">%curr% sur %total%</span>'
+                },
+                image: {
+                  tError: '<a href="%url%">L\'image #%curr%</a> n\'a pas pu être chargée.'
+                }
+            });
+        });
+    }
+
     // functions to load previous and next content
     $(function() {
       $('.ajp').click(function(e) {

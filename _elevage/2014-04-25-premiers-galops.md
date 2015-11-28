@@ -50,12 +50,14 @@ Erotic de Theyssamy (**Viking du Bary** x **Totoche du Banney**) né le 22/04/20
 	</tr>
 </table>
 
-<span class="gallery">
-<a href="/images/erotic_theyssamy_galops_0414_1.jpg">![Erotic de Theyssamy - Première pelle]({{ site.baseurl }}/images/erotic_theyssamy_galops_0414_1_link_pv.jpg 'Erotic de Theyssamy - Première pelle')</a>
-<a href="/images/erotic_theyssamy_galops_0414_2.jpg">![Erotic de Theyssamy - Enfin sage]({{ site.baseurl }}/images/erotic_theyssamy_galops_0414_2_link_pv.jpg 'Erotic de Theyssamy - Enfin sage')</a>
-<a href="/images/erotic_theyssamy_galops_0414_3.jpg">![Erotic de Theyssamy - J'engage déjà fort]({{ site.baseurl }}/images/erotic_theyssamy_galops_0414_3_link_pv.jpg "Erotic de Theyssamy - J'engage déjà fort")</a>
-<a href="/images/erotic_theyssamy_galops_0414_4.jpg">![Erotic de Theyssamy - Premiers galops]({{ site.baseurl }}/images/erotic_theyssamy_galops_0414_4_link_pv.jpg 'Erotic de Theyssamy - Premiers galops')</a>
-<a href="/images/erotic_theyssamy_galops_0414_5.jpg">![Erotic de Theyssamy]({{ site.baseurl }}/images/erotic_theyssamy_galops_0414_5_link_pv.jpg 'Erotic de Theyssamy')</a>
-<a href="/images/erotic_theyssamy_galops_0414_6.jpg">![Erotic de Theyssamy - Premiers galops]({{ site.baseurl }}/images/erotic_theyssamy_galops_0414_6_link_pv.jpg 'Erotic de Theyssamy - Premiers galops')</a>
-<a href="/images/erotic_theyssamy_galops_0414_7.jpg">![Erotic de Theyssamy - Premiers galops]({{ site.baseurl }}/images/erotic_theyssamy_galops_0414_7_link_pv.jpg 'Erotic de Theyssamy - Premiers galops')</a>
-</span>
+<div class="gallery" style="display:block;">
+	<ul class="rig columns-4">
+		<li><a href="/images/erotic_theyssamy_galops_0414_5.jpg" title="Erotic de Theyssamy"><img src="{{ site.baseurl }}/images/erotic_theyssamy_galops_0414_5_link_pv.jpg" alt='Erotic de Theyssamy' /></a></li>
+		<li><a href="/images/erotic_theyssamy_galops_0414_4.jpg" title="Premiers galops"><img src="{{ site.baseurl }}/images/erotic_theyssamy_galops_0414_4_link_pv.jpg" alt='Erotic de Theyssamy - Premiers galops' /></a></li>
+		<li><a href="/images/erotic_theyssamy_galops_0414_1.jpg" title="Première pelle"><img src="{{ site.baseurl }}/images/erotic_theyssamy_galops_0414_1_link_pv.jpg" alt='Erotic de Theyssamy - Première pelle' /></a></li>
+		<li><a href="/images/erotic_theyssamy_galops_0414_6.jpg" title="Premiers galops"><img src="{{ site.baseurl }}/images/erotic_theyssamy_galops_0414_6_link_pv.jpg" alt='Erotic de Theyssamy - Premiers galops' /></a></li>
+		<li><a href="/images/erotic_theyssamy_galops_0414_7.jpg" title="Premiers galops"><img src="{{ site.baseurl }}/images/erotic_theyssamy_galops_0414_7_link_pv.jpg" alt='Erotic de Theyssamy - Premiers galops' /></a></li>
+		<li><a href="/images/erotic_theyssamy_galops_0414_3.jpg" title="J'engage déjà fort"><img src="{{ site.baseurl }}/images/erotic_theyssamy_galops_0414_3_link_pv.jpg" alt="Erotic de Theyssamy - J'engage déjà fort" /></a></li>
+		<li><a href="/images/erotic_theyssamy_galops_0414_2.jpg" title="Enfin sage"><img src="{{ site.baseurl }}/images/erotic_theyssamy_galops_0414_2_link_pv.jpg" alt='Erotic de Theyssamy - Enfin sage' /></a></li>
+	</ul>
+</div>

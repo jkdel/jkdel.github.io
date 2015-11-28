@@ -36,4 +36,4 @@ As this is a one-page website the generated html files are not intended to be se
     +----------------------------------+
 
 
-The ajax is needed to keep the user on the main page but doesn't affect crawling, since the arrows are links.
+AJAX is needed to keep the user on the main page but doesn't affect crawling, since the arrows are links.

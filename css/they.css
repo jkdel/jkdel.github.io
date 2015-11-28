@@ -174,7 +174,7 @@ footer {
     max-width: 90%;
     margin: 60px auto 0 auto;
     padding-bottom: 60px;
-    color: grey;
+    color: #bbb;
 }
 
 footer td:first-child {
@@ -287,8 +287,9 @@ dd + dt {
     height: 315px;
 }
 
-.post-content p + table, .post-content table + p, .post-content iframe + p, .post-content p + iframe, .post-content iframe + dl, .post-content dl + iframe {
-    margin-top: 10px;
+.post-content p + table, .post-content table + p, .post-content iframe + p, .post-content p + iframe, .post-content iframe + dl, .post-content dl + iframe,
+.post-content p + .gallery, .post-content .gallery + p, .post-content iframe + .gallery, .post-content .gallery + iframe, .post-content table + .gallery, .post-content .gallery + table {
+    margin-top: 20px;
 }
 
 .post-header h1 {
@@ -474,6 +475,14 @@ dd + dt {
         height: 7em;
         max-height: 20%;
     }
+
+    ul.rig {
+        margin-left: 0;
+    }
+    ul.rig li {
+        width: 100% !important;
+        margin: 0 0 20px;
+    }
 }
 
 
@@ -537,4 +546,25 @@ dd + dt {
         display: inline-block;
         width: 33.3333%;
     }
+}
+
+ul.rig {
+    list-style: none;
+    font-size: 0px;
+    margin-left: -2.5%; /* should match li left margin */
+    padding: 0;
+}
+ul.rig li {
+    display: inline-block;
+    margin: 0 0 2.5% 2.5%;
+    padding: 0;
+    vertical-align: top;
+}
+ul.rig li img {
+    max-width: 100%;
+    height: auto;
+    /*margin: 0 0 10px;*/
+}
+ul.rig.columns-4 li {
+    width: 22.5%; /* this value + 2.5 should = 25% */
 }

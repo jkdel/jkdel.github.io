@@ -6,7 +6,7 @@ og_image_url: /images/star_theyssamy_auvers_0315.jpg
 ---
 
 =Alibi de Theyssamy à Deauville=
-    Alibi de Theyssamy (**Quite Easy** x **Vas y donc Longane**) double sans faute dans les 5ans qualification à Deauville ce weekend sous la selle de **Jean Pascal Sartous**.
+    Alibi de Theyssamy (**Quite Easy** x **Vas y donc Longane**) double sans faute dans les 5 ans qualification à Deauville ce weekend sous la selle de **Jean Pascal Sartous**.
 <br>
 =Aristo de Theyssamy au Mans=
     Aristo de Theyssamy (**Rock n'Roll Semilly** x **Totoche du Banney**) sans faute en CC2 hier au Mans sous la selle de **Pierre Cabariste**.
