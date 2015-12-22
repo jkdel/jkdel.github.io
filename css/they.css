@@ -250,7 +250,7 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
     width: auto;
 }
 
-.post-content table {
+.post-content table, .gallery {
     overflow: hidden;
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
@@ -396,6 +396,27 @@ dd + dt {
     text-align: left;
 }
 
+ul.rig {
+    list-style: none;
+    font-size: 0px;
+    margin-left: -2.5%; /* should match li left margin */
+    padding: 0;
+}
+ul.rig li {
+    display: inline-block;
+    margin: 0 0 2.5% 2.5%;
+    padding: 0;
+    vertical-align: top;
+}
+ul.rig li img {
+    max-width: 100%;
+    height: auto;
+    /*margin: 0 0 10px;*/
+}
+ul.rig.columns-4 li {
+    width: 30.8%; /* this value + 2.5 should = 25% */
+}
+
 /*SCREEN SIZE*/
 
 /* max-heigth 1280px > l*/
@@ -422,6 +443,16 @@ dd + dt {
 /*l*/
 @media only screen and (min-resolution: 2dppx) and (min-height: 768px) {
     .banner { background-image: url("/images/b_l@2x.jpg"); }
+}
+
+@media screen and (max-width: 479px) {
+    ul.rig {
+        margin-left: 0;
+    }
+    ul.rig li {
+        width: 100% !important;
+        margin: 0 0 20px;
+    }
 }
 
 @media screen and (max-width: 567px) {
@@ -470,18 +501,13 @@ dd + dt {
         font-size: 12pt;
     }
 
-
     .banner-post-image > img {
         height: 7em;
         max-height: 20%;
     }
 
-    ul.rig {
-        margin-left: 0;
-    }
-    ul.rig li {
-        width: 100% !important;
-        margin: 0 0 20px;
+    ul.rig.columns-4 li {
+        width: 47.5%; /* this value + 2.5 should = 25% */
     }
 }
 
@@ -535,6 +561,10 @@ dd + dt {
     .banner-post-image > img {
         max-height: 10em;
     }
+
+    ul.rig.columns-4 li {
+        width: 30.8%; /* this value + 2.5 should = 25% */
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -546,25 +576,4 @@ dd + dt {
         display: inline-block;
         width: 33.3333%;
     }
-}
-
-ul.rig {
-    list-style: none;
-    font-size: 0px;
-    margin-left: -2.5%; /* should match li left margin */
-    padding: 0;
-}
-ul.rig li {
-    display: inline-block;
-    margin: 0 0 2.5% 2.5%;
-    padding: 0;
-    vertical-align: top;
-}
-ul.rig li img {
-    max-width: 100%;
-    height: auto;
-    /*margin: 0 0 10px;*/
-}
-ul.rig.columns-4 li {
-    width: 22.5%; /* this value + 2.5 should = 25% */
 }

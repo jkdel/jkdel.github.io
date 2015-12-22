@@ -83,7 +83,7 @@
         }
 
       });
-      
+
       window.onpopstate = function(event) {
         back_to_state(event);
       };
@@ -101,4 +101,3 @@
         }
       });
     });
-     
