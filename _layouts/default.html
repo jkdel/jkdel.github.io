@@ -2,8 +2,7 @@
 ---
 
 <!DOCTYPE html>
-<html lang="fr" prefix="og: http://ogp.me/ns#">
-  {% include head.html %}
+<html lang="fr" prefix="og: http://ogp.me/ns#">{% include head.html %}
   <body>
     <header class="banner pure-g">
       <div class="wrap-1 pure-u-1 pure-g">
@@ -27,8 +26,6 @@
         <a title="Aller vers le bas" class="arrow-d" href="#{{col}}"><i class="fa fa-angle-down"></i></a>
       </div>
     </header>
-    {{ content }}
-    {% include footer.html %}
-    {% include bottom.html %}
+    {{ content }}{% include footer.html %}{% include bottom.html %}
   </body>
 </html>

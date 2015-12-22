@@ -1,7 +1,7 @@
 ---
 date: 2015-03-25 00:00:00 UTC
 title: Bons résultats en mars
-description: Alibi de Theyssamy, Aristo de Theyssamy et Une Star de Theyssamy ont fourni de bons résultats ce mois ci.
+description: "Alibi de Theyssamy, Aristo de Theyssamy et Une Star de Theyssamy ont fourni de bons résultats ce mois ci."
 og_image_url: /images/star_theyssamy_auvers_0315.jpg
 ---
 
