@@ -5,7 +5,7 @@ description: "L'élevage de Theyssamy, situé au haras des Boulaies dans l'Orne,
 baseurl: ""
 url: "http://www.theyssamy.fr"
 github_username: jkdel
-highlighter: false
+highlighter: pygments
 lsi: false
 encoding: utf-8
 
