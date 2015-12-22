@@ -15,7 +15,7 @@ layout: default
               <a title="Article précédent" class="arrow ajp" id="{{ id_prefix }}-arrow-left" href="{% for doc in collection[1].docs offset:col_len_m_2 limit:1 %}{{ doc.url }}{% endfor %}"><i class="fa fa-angle-left"></i></a>
             </td>
             <td class="content" id="{{collection[0]}}">
-              <article>
+              <article{% if collection[1].docs.last.class %} class="{{collection[1].docs.last.class}}"{% endif%}>
               <header class="post-header">
                   <div class="collection"><span class="collection-title">{{ collection[0] | replace: "actualites","Actualités" | replace: "elevage","Élevage" | replace: "a_vendre","À vendre" }}</span>
                   <span class="document-index">

@@ -33,7 +33,7 @@
           <a class="arrow ajp" title="Article précédent" id="{{ id_prefix }}-arrow-left" href="{{new_url}}"><i class="fa fa-angle-left"></i></a>
         </td>
         <td class="content" id="{{page.collection}}">
-          <article>
+          <article{% if page.class %} class="{{page.class}}"{% endif%}>
           <header class="post-header">
               <div class="collection"><span class="collection-title">{{ page.collection | replace: "actualites","Actualités" | replace: "elevage","Élevage" | replace: "a_vendre","À vendre" }}</span>
               <span class="document-index">
