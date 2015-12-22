@@ -300,9 +300,25 @@ dd + dt {
     height: 315px;
 }
 
-.post-content p + table, .post-content table + p, .post-content iframe + p, .post-content p + iframe, .post-content iframe + dl, .post-content dl + iframe,
-.post-content p + .gallery, .post-content .gallery + p, .post-content iframe + .gallery, .post-content .gallery + iframe, .post-content table + .gallery, .post-content .gallery + table {
+/*.post-content p + table,
+.post-content p + iframe,
+.post-content p + .gallery,
+.post-content table + p,
+.post-content table + .gallery,
+.post-content table + iframe,
+.post-content iframe + p,
+.post-content iframe + dl,
+.post-content iframe + .gallery,
+.post-content iframe + table,
+.post-content .gallery + p,
+.post-content .gallery + iframe,
+.post-content .gallery + table,
+.post-content dl + iframe {
     margin-top: 20px;
+}*/
+
+.post-content iframe:not(:last-child), .post-content table:not(:last-child), .post-content .gallery:not(:last-child), .post-content dl:not(:last-child), .post-content p:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .post-header h1 {
@@ -413,6 +429,7 @@ ul.rig {
     list-style: none;
     font-size: 0px;
     margin-left: -2.5%; /* should match li left margin */
+    margin-bottom: -2.5%;
     padding: 0;
 }
 ul.rig li {
@@ -420,6 +437,9 @@ ul.rig li {
     margin: 0 0 2.5% 2.5%;
     padding: 0;
     vertical-align: top;
+}
+ul.rig li:last-child {
+    margin-bottom: 0;
 }
 ul.rig li img {
     max-width: 100%;
