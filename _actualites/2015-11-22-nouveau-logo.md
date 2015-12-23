@@ -9,7 +9,7 @@ Petit à petit le projet d'un site internet pour l'élevage se construit. Ainsi 
 
 Alors que l'ancien logo reprenait les contours de **Valentin de Theyssamy** à l'âge de foal, c'est maintenant **Rodrigo de Theyssamy** que l'on voit sous la selle d'**Olivier Cosson**.
 
-Pour mettre en avant l'orientation obstacle des chevaux produits, cette image nous a semblée plus appropriée et se retrouve également dans le bandeau de tête du site.
+Pour mettre en avant l'orientation obstacle des chevaux produits, cette image nous a semblé plus appropriée et se retrouve également dans le bandeau de tête du site.
 
 <div class="gallery" style="display:block;">
     <ul class="rig columns-4">
