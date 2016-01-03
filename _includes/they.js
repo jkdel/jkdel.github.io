@@ -31,11 +31,16 @@
 	                   }
 	               });
 	           });
+						 try {
+							 FB.XFBML.parse();
+						 } catch(ex) {
+							 console.log("couldn't parse FB like");
+						 }
 	   		  });
 	    col[collection_index].loaded = len;
 	    update_arrows(len, collection_index);
-        ga('send', 'pageview', {
-          'page': href,
-          'title': col[collection_index].titles[len]
-        });
+      ga('send', 'pageview', {
+        'page': href,
+        'title': col[collection_index].titles[len]
+      });
     }

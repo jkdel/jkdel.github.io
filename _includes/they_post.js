@@ -30,38 +30,43 @@
 	}
 
 	function load_and_update(len, collection_index) {
-      if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
-        col[collection_index].loaded = len;
-        window.location = col[collection_index].docs[len];
-      } else {
-        href = col[collection_index].docs[len];
-        $("#"+col[collection_index].name).load(href+" article", function() {
-        $('.gallery', this).each(function() {
-            $(this).magnificPopup({
-                delegate: 'a',
-                type: 'image',
-                tLoading: 'Chargement...',
-                mainClass: 'mfp-img-mobile',
-                gallery: {
-                  enabled: true,
-                  navigateByImgClick: true,
-                  preload: [0,1],
-                  tPrev: 'Précédent',
-                  tNext: 'Suivant',
-                  tCounter: '<span class="mfp-counter">%curr% sur %total%</span>'
-                },
-                image: {
-                  tError: '<a href="%url%">L\'image #%curr%</a> n\'a pas pu être chargée.'
-                }
-            });
-        });
-		  });
-        col[collection_index].loaded = len;
-        update_arrows(len, collection_index);
-        push_state(href);
-        ga('send', 'pageview', {
-          'page': href,
-          'title': col[collection_index].titles[len]
-        });
-      }
-    }
+		if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
+			col[collection_index].loaded = len;
+			window.location = col[collection_index].docs[len];
+		} else {
+			href = col[collection_index].docs[len];
+			$("#"+col[collection_index].name).load(href+" article", function() {
+				$('.gallery', this).each(function() {
+					$(this).magnificPopup({
+						delegate: 'a',
+						type: 'image',
+						tLoading: 'Chargement...',
+						mainClass: 'mfp-img-mobile',
+						gallery: {
+							enabled: true,
+							navigateByImgClick: true,
+							preload: [0,1],
+							tPrev: 'Précédent',
+							tNext: 'Suivant',
+							tCounter: '<span class="mfp-counter">%curr% sur %total%</span>'
+						},
+						image: {
+							tError: '<a href="%url%">L\'image #%curr%</a> n\'a pas pu être chargée.'
+						}
+					});
+				});
+				try {
+					FB.XFBML.parse();
+				} catch(ex) {
+					console.log("couldn't parse FB like");
+				}
+			});
+			col[collection_index].loaded = len;
+			update_arrows(len, collection_index);
+			push_state(href);
+			ga('send', 'pageview', {
+				'page': href,
+				'title': col[collection_index].titles[len]
+			});
+		}
+	}
