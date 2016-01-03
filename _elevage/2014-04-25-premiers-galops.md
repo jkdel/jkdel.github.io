@@ -3,6 +3,8 @@ date: 2014-04-25 00:00:00 UTC
 title: Premiers galops
 description: Erotic de Theyssamy (Viking du Bary x Totoche du Banney) né le 22/04/2014 fait ses premiers galops.
 og_image_url: /images/erotic_theyssamy_galops_0414.jpg
+og_image_width: 654
+og_image_height: 342
 ---
 
 Erotic de Theyssamy (**Viking du Bary** x **Totoche du Banney**) né le 22/04/2014 fait ses premiers galops et premières gamelles.

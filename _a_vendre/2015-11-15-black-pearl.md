@@ -3,6 +3,8 @@ date: 2015-11-15 00:00:00 UTC
 title: "Black Pearl de Theyssamy"
 description: "Black Pearl est une jument gentille et dans le sang. Elle dispose d'un bon équilibre et de trois belles allures."
 og_image_url: /images/black_pearl_theyssamy_1115.jpg
+og_image_width: 1200
+og_image_height: 628
 ---
 
 Black Pearl de Theyssamy est une jument SF par **Negus de Talma** et **Kazia du Rocher** par **Brazilia Paluelle**.

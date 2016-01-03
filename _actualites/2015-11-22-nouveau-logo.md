@@ -3,6 +3,8 @@ date: '2015-11-22 00:00:00 UTC'
 title: Nouveau logo
 description: "Avec un logo pour le haras, c'est aussi le site internet de l'élevage de Theyssamy qui se dote d'un nouveau logo."
 og_image_url: /images/nouveau_logo_1122.png
+og_image_width: 1693
+og_image_height: 886
 ---
 
 Petit à petit le projet d'un site internet pour l'élevage se construit. Ainsi s'est aujourd'hui posée la question d'un logo officiel, l'ancien n'ayant été qu'un exemple temporaire.
