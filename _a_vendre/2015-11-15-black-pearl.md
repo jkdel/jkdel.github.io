@@ -53,4 +53,4 @@ Gentille, dans le sang, avec un bon coup de saut et du potentiel elle serait idÃ
 	</tr>
 </table>
 
-<iframe title="Black Pearl de Theyssamy" src="https://www.youtube.com/embed/1sHt3rbdWL0" frameborder="0" allowfullscreen></iframe>
+<div class="lazyYT" data-youtube-id="1sHt3rbdWL0" data-ratio="16:9">Chargement...</div>

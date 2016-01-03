@@ -3,6 +3,7 @@ $(document).ready(function() {
 		col[i].loaded = col[i].docs.length-1;
 	}
 	load_gallery();
+	$('.lazyYT').lazyYT('AIzaSyB_Ao6-4FRocW-TNMzlojTgg6l_JkZOLvo');
 });
 
 function back_to_state(event) {
@@ -31,6 +32,7 @@ function load_and_update(len, collection_index) {
 				}
 			});
 		});
+		$('.lazyYT').lazyYT();
 		try {
 			FB.XFBML.parse();
 		} catch(ex) {
