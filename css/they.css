@@ -595,3 +595,12 @@ ul.rig.columns-4 li {
     width: 33.3333%;
   }
 }
+
+@supports (-webkit-appearance:none) {
+  .lazyYT, .lazyYT-container {
+    overflow: visible !important;
+  }
+  .lazyYT-image-loaded > button {
+    transform: initial !important;
+  }
+}
