@@ -335,6 +335,10 @@ dd + dt {
     margin: 0;
 }
 
+.fb-like {
+  padding-top: 10px;
+}
+
 .post-content {
     padding: 30px 0;
 }
