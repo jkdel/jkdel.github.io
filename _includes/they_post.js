@@ -56,7 +56,7 @@ function load_and_update(len, collection_index) {
 					}
 				});
 			});
-			$('.lazyYT').lazyYT();
+			$('.lazyYT').lazyYT('AIzaSyB_Ao6-4FRocW-TNMzlojTgg6l_JkZOLvo');
 			try {
 				FB.XFBML.parse();
 			} catch(ex) {
