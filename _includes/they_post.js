@@ -57,11 +57,6 @@ function load_and_update(len, collection_index) {
 				});
 			});
 			$('.lazyYT').lazyYT('AIzaSyB_Ao6-4FRocW-TNMzlojTgg6l_JkZOLvo');
-			try {
-				FB.XFBML.parse();
-			} catch(ex) {
-				console.log("couldn't parse FB like");
-			}
 		});
 		col[collection_index].loaded = len;
 		update_arrows(len, collection_index);

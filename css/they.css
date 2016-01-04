@@ -316,8 +316,38 @@ dd + dt {
   margin: 0;
 }
 
-.fb-like {
-  padding-top: 10px;
+.fb {
+  display: inline-block;
+  padding: 0px;
+  margin-top: 10px;
+  background: transparent linear-gradient(#4C69BA, #3B55A0) repeat scroll 0% 0%;
+  border: medium none;
+  border-radius: 2px;
+  height: 20px;
+  line-height: 20px;
+  white-space: nowrap;
+  font-family: helvetica,arial,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #FFF;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #354C8C;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.fb div:after {
+  margin: 0 6px 0 21px;
+  content: "Partager";
+}
+
+.fb div {
+    background: transparent url(/images/fb.png) no-repeat scroll 3px 3px;
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 216" width="14px" height="14px" preserveAspectRatio="xMinYMin meet"><path fill="white" d="M204.1 0H11.9C5.3 0 0 5.3 0 11.9v192.2c0 6.6 5.3 11.9 11.9 11.9h103.5v-83.6H87.2V99.8h28.1v-24c0-27.9 17-43.1 41.9-43.1 11.9 0 22.2.9 25.2 1.3v29.2h-17.3c-13.5 0-16.2 6.4-16.2 15.9v20.8h32.3l-4.2 32.6h-28V216h55c6.6 0 11.9-5.3 11.9-11.9V11.9C216 5.3 210.7 0 204.1 0z"></path></svg>') no-repeat scroll 3px 3px;
+    float: left;
 }
 
 .post-content {
