@@ -306,7 +306,7 @@ dd + dt {
   height: 315px;
 }
 
-.post-content iframe:not(:last-child), .post-content table:not(:last-child), .post-content .gallery:not(:last-child), .post-content dl:not(:last-child), .post-content p:not(:last-child) {
+.post-content .lazyYT:not(:last-child), .post-content table:not(:last-child), .post-content .gallery:not(:last-child), .post-content dl:not(:last-child), .post-content p:not(:last-child) {
   margin-bottom: 20px;
 }
 
