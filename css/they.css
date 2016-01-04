@@ -318,6 +318,7 @@ dd + dt {
 
 .fb {
   display: inline-block;
+  vertical-align: top;
   padding: 0px;
   margin-top: 10px;
   background: transparent linear-gradient(#4C69BA, #3B55A0) repeat scroll 0% 0%;
