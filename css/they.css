@@ -6,6 +6,7 @@ html, body {
   font-size: 100%;
   margin: 0;
   background: #1c1d26;
+  -webkit-text-size-adjust:none;
 }
 
 html, body, h1, h2, h3, p, td {
@@ -287,25 +288,6 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
   content: "Vendu !";
 }
 
-dt {
-  font-weight: 500;
-}
-
-dt + dd {
-  margin-top: 10px;
-  line-height: 1.6em;
-}
-
-dd + dt {
-  margin-top: 20px;
-}
-
-.post-content iframe {
-  width: 100%;
-  max-width: 600px;
-  height: 315px;
-}
-
 .post-content .lazyYT:not(:last-child), .post-content table:not(:last-child), .post-content .gallery:not(:last-child), .post-content dl:not(:last-child), .post-content p:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -386,6 +368,10 @@ dd + dt {
   font-weight: 300;
   font-family: "Roboto";
   margin-right: 10px;
+}
+
+.lazyYT {
+  max-width: 100%;
 }
 
 .div404 {
