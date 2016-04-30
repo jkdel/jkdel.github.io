@@ -1,28 +1,28 @@
 ---
 layout: default
 ---
-{% for collection in site.collections %}{% if collection[1].docs[0] %}{% capture id_prefix %}{{collection[0]}}-{{forloop.index | minus:1 }}{% endcapture %}
+{% for collection in site.collections %}{% if collection.docs[0] %}{% capture id_prefix %}{{collection.label}}-{{forloop.index | minus:1 }}{% endcapture %}
         <table class="content-holder">
           <tr>
-            <td class="goto-side ajp" id="{{ id_prefix }}-goto-left">{% for doc in collection[1].docs %}{% assign col_len_m_2 = forloop.length | minus:2 %}{% break %}{% endfor %}
-              <a title="Article précédent" class="arrow ajp" id="{{ id_prefix }}-arrow-left" href="{% for doc in collection[1].docs offset:col_len_m_2 limit:1 %}{{ doc.url }}{% endfor %}"><i class="fa fa-angle-left"></i></a>
+            <td class="goto-side ajp" id="{{ id_prefix }}-goto-left">{% for doc in collection.docs %}{% assign col_len_m_2 = forloop.length | minus:2 %}{% break %}{% endfor %}
+              <a title="Article précédent" class="arrow ajp" id="{{ id_prefix }}-arrow-left" href="{% for doc in collection.docs offset:col_len_m_2 limit:1 %}{{ doc.url }}{% endfor %}"><i class="fa fa-angle-left"></i></a>
             </td>
-            <td class="content" id="{{collection[0]}}">
-              <article{% if collection[1].docs.last.class %} class="{{collection[1].docs.last.class}}"{% endif%}>
+            <td class="content" id="{{collection.label}}">
+              <article{% if collection.docs.last.class %} class="{{collection.docs.last.class}}"{% endif%}>
               <header class="post-header">
-                  <div class="collection"><span class="collection-title">{{ collection[0] | replace: "actualites","Actualités" | replace: "elevage","Élevage" | replace: "a_vendre","À vendre" }}</span>
-                  <span class="document-index">{% for doc in collection[1].docs %}{{forloop.length}}/{{forloop.length}}{% break %}{% endfor %}
+                  <div class="collection"><span class="collection-title">{{ collection.label | replace: "actualites","Actualités" | replace: "elevage","Élevage" | replace: "a_vendre","À vendre" }}</span>
+                  <span class="document-index">{% for doc in collection.docs %}{{forloop.length}}/{{forloop.length}}{% break %}{% endfor %}
                   </span>
                   </div>
-                  <h1 class="post-title">{{ collection[1].docs.last.title }}</h1>
-                  <p class="post-meta">{{ collection[1].docs.last.date | date: "%d/%m/%Y" }}</p>
-                  <a class="fb" target="_blank" href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ collection[1].docs.last.url }}"><div></div></a>
+                  <h1 class="post-title">{{ collection.docs.last.title }}</h1>
+                  <p class="post-meta">{{ collection.docs.last.date | date: "%d/%m/%Y" }}</p>
+                  <a class="fb" target="_blank" href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ collection.docs.last.url }}"><div></div></a>
               </header>
-              <div class="post-content{% unless collection[1].docs.last.nocolumn %} post-column {% endunless %}">{{ collection[1].docs.last.content }}
+              <div class="post-content{% unless collection.docs.last.nocolumn %} post-column {% endunless %}">{{ collection.docs.last.content }}
               </div>
               </article>
             </td>
-            <td class="goto-side ajn" id="{{ id_prefix }}-goto-right">{% for doc in collection[1].docs %}{% if forloop.length == 1 %}{% assign ref = nil %}{% else %}{% assign ref = collection[1].docs[0].url %}{% endif %}{% break %}{% endfor %}
+            <td class="goto-side ajn" id="{{ id_prefix }}-goto-right">{% for doc in collection.docs %}{% if forloop.length == 1 %}{% assign ref = nil %}{% else %}{% assign ref = collection.docs[0].url %}{% endif %}{% break %}{% endfor %}
               <a title="Article suivant" class="arrow ajn" id="{{ id_prefix }}-arrow-right" href="{{ ref }}"><i class="fa fa-angle-right"></i></a>
             </td>
           </tr>

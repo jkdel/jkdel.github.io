@@ -1,10 +1,10 @@
 // define an array with collections and content
 var col = new Array();
-{% for collection in site.collections %}{% if collection[1].docs[0] %}{% capture id_prefix %}{{collection[0]}}-{{forloop.index | minus:1 }}{% endcapture %}
+{% for collection in site.collections %}{% if collection.docs[0] %}{% capture id_prefix %}{{collection.label}}-{{forloop.index | minus:1 }}{% endcapture %}
 col.push({
-  name: "{{ collection[0] }}",
-  docs: {{ collection[1].docs | map: 'url' | jsonify }},
-  titles: {{ collection[1].docs | map: 'title' | jsonify }},
+  name: "{{ collection.label }}",
+  docs: {{ collection.docs | map: 'url' | jsonify }},
+  titles: {{ collection.docs | map: 'title' | jsonify }},
   loaded: -1,
   members_id: ["{{id_prefix}}-goto-left",
   "{{id_prefix}}-arrow-left",
