@@ -20,7 +20,7 @@ As this is a one-page website the generated html files are not intended to be se
     +-+------------------------------+-+
     | |  Last article of the first   | |
     | |  collection. The arrows can  | |
-    |<|  used to navigate through    |>|
+    |<|  be used to navigate through |>|
     | |  all articles of this        | |
     | |  collection.                 | |
     +-+------------------------------+-+
