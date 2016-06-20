@@ -22,7 +22,7 @@
         </div>
       </div>
     </div>
-    <div class="goto-down pure-u-1">{% for collection in site.collections %}{% if collection[1].docs[0] %}{% assign col = collection[0] %}{% break %}{% endif %}{% endfor %}
+    <div class="goto-down pure-u-1">{% for collection in site.collections %}{% if collection.docs[0] %}{% assign col = collection.label %}{% break %}{% endif %}{% endfor %}
       <a title="Aller vers le bas" class="arrow-d" href="#{{col}}"><i class="fa fa-angle-down"></i></a>
     </div>
   </header>
