@@ -102,7 +102,7 @@ Voici les origines du produit à venir :
 	</tr>
 </table>
 
-###Nervoso avec Josabeth de Theyssamy (Vas Y Donc Longane x Foudre de Guerre)
+###Nervoso avec Josabeth (Ami de la Fosse x Foudre de Guerre)
 
 Après une très bonne carrière sportive la production de **Nervoso** s'avère très prométeuse. Nous lui avons associé **Josabeth**, une jument descendante de la célèbre championne du monde **Pomone B** et propre sœur de **Ma Pomme** (qui a produit **Fair Play III**, **Oiseau Mouche**, **Coppelia**, etc.).
 
@@ -150,7 +150,7 @@ Voici les origines du produit à venir :
 	</tr>
 </table>
 
-###Marlou des Etisses avec Hawai de Theyssamy (Vas Y Donc Longane x Foudre de Guerre)
+###Marlou des Etisses avec Hawai de Theyssamy (Quatoubet du Rouet x Mexico)
 
 **Marlou des Etisses** nous a séduit par son modèle harmonieux. Ses performances et un prix attractif nous l'ont fait lui associer **Hawai de Theyssamy** qui a notamment produit **Une Star de Theyssamy**, ISO 147 à 6 ans.
 
