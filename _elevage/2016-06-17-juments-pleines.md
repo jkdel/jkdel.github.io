@@ -4,13 +4,13 @@ title: Les poulains de l'année prochaine
 description: Les 4 juments saillies cette année sont pleines du premier coup ! Découvrez nos choix d'étalons.
 ---
 <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
-<p>Cette année nous avons quatre juments à la saillie et toutes ont rempli du premier coup ! Voici nos choix d'étalons :</p>
+<p>Cette année nous avons quatre juments à la saillie et toutes ont rempli du premier coup ! Voici nos choix d'étalons&nbsp;:</p>
 
 <h3>Quite Easy avec Kismi de Theyssamy (Livarot x Foudre de Guerre)</h3>
 
 <p><strong>Quite Easy</strong> est une valeur sûre, ayant déjà bien produit, y compris au sein de l'élevage (Une Star de Theyssamy, ISO 147, Valentin de Theyssamy, ISO 137, ou encore Alibi de Theyssamy). Avec <strong>Kismi de Theyssamy</strong> (indicée 131, finaliste à Fontainebleau à 6 ans) on retrouve la souche maternelle de <strong>Valentin de Theyssamy</strong>, champion de france des foals mâles agés, vice champion de france en hunter à 4 ans, finaliste cycle classique à 6 ans ou encore <strong>Alibi de Theyssamy</strong>, finaliste en cycle classique à 5 ans, meilleur produit de Quite Easy à tourner en cycle classique à 6 ans cette année au classement actuel, avec jusqu'à présent 10 classements sur 13 parcours.</p>
 
-<p>Voici les origines du produit à venir :</p>
+<p>Voici les origines du produit à venir&nbsp;:</p>
 <table class="genealogie">
 	<tr>
 		<td rowspan="4" class="c-cell">Quite Easy (DE) HOLST</td>
@@ -60,7 +60,7 @@ description: Les 4 juments saillies cette année sont pleines du premier coup ! 
 
 <p><strong>Utah Von De Rock</strong> est jeune étalon performer indicé SO 147, d'une très bonne souche maternelle, finaliste à 5, 6 et 7 ans à Fontainebleau, commençant à concourir au niveau international sur 145cm. Sur sa première génération il a l'avantage de faire naître de nombreux poulains pies, ce dont nous rêvions. <strong>One Love de Theyssamy</strong> est quant à elle une bonne gagnante en CSO indicé 117, mère d'Alibi de Theyssamy, son premier produit qui éffectue une brillante saison en cycle classique 6 ans.</p>
 
-<p>Voici les origines du produit à venir :</p>
+<p>Voici les origines du produit à venir&nbsp;:</p>
 <table class="genealogie">
 	<tr>
 		<td rowspan="4" class="c-cell">Utah Van De Rock (SFB)</td>
@@ -110,7 +110,7 @@ description: Les 4 juments saillies cette année sont pleines du premier coup ! 
 </div>
 
 <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
-<p>Voici les origines du produit à venir :</p>
+<p>Voici les origines du produit à venir&nbsp;:</p>
 <table class="genealogie">
 	<tr>
 		<td rowspan="4" class="c-cell">Nervoso SFB</td>
@@ -158,7 +158,7 @@ description: Les 4 juments saillies cette année sont pleines du premier coup ! 
 
 <p><strong>Marlou des Etisses</strong> nous a séduit par son modèle harmonieux. Ses performances et un prix attractif nous l'ont fait lui associer <strong>Hawai de Theyssamy</strong> qui a notamment produit <strong>Une Star de Theyssamy</strong>, ISO 147 à 6 ans.</p>
 
-<p>Voici les origines du produit à venir :</p>
+<p>Voici les origines du produit à venir&nbsp;:</p>
 <table class="genealogie">
 	<tr>
 		<td rowspan="4" class="c-cell">Marlou Des Etisses SFA</td>
