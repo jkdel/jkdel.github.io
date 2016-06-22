@@ -3,14 +3,14 @@ date: 2016-06-17 00:00:00 UTC
 title: Les poulains de l'année prochaine
 description: Les 4 juments saillies cette année sont pleines du premier coup ! Découvrez nos choix d'étalons.
 ---
+<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+<p>Cette année nous avons quatre juments à la saillie et toutes ont rempli du premier coup ! Voici nos choix d'étalons :</p>
 
-Cette année nous avons quatre juments à la saillie et toutes ont rempli du premier coup ! Voici nos choix d'étalons :
+<h3>Quite Easy avec Kismi de Theyssamy (Livarot x Foudre de Guerre)</h3>
 
-###Quite Easy avec Kismi de Theyssamy (Livarot x Foudre de Guerre)
+<p><strong>Quite Easy</strong> est une valeur sûre, ayant déjà bien produit, y compris au sein de l'élevage (Une Star de Theyssamy, ISO 147, Valentin de Theyssamy, ISO 137, ou encore Alibi de Theyssamy). Avec <strong>Kismi de Theyssamy</strong> (indicée 131, finaliste à Fontainebleau à 6 ans) on retrouve la souche maternelle de <strong>Valentin de Theyssamy</strong>, champion de france des foals mâles agés, vice champion de france en hunter à 4 ans, finaliste cycle classique à 6 ans ou encore <strong>Alibi de Theyssamy</strong>, finaliste en cycle classique à 5 ans, meilleur produit de Quite Easy à tourner en cycle classique à 6 ans cette année au classement actuel, avec jusqu'à présent 10 classements sur 13 parcours.</p>
 
-**Quite Easy** est une valeur sûre, ayant déjà bien produit, y compris au sein de l'élevage (Une Star de Theyssamy, ISO 147, Valentin de Theyssamy, ISO 137, ou encore Alibi de Theyssamy). Avec **Kismi de Theyssamy** (indicée 131, finaliste à Fontainebleau à 6 ans) on retrouve la souche maternelle de **Valentin de Theyssamy**, champion de france des foals mâles agés, vice champion de france en hunter à 4 ans, finaliste cycle classique à 6 ans ou encore **Alibi de Theyssamy**, finaliste en cycle classique à 5 ans, meilleur produit de Quite Easy à tourner en cycle classique à 6 ans cette année au classement actuel, avec jusqu'à présent 10 classements sur 13 parcours.
-
-Voici les origines du produit à venir :
+<p>Voici les origines du produit à venir :</p>
 <table class="genealogie">
 	<tr>
 		<td rowspan="4" class="c-cell">Quite Easy (DE) HOLST</td>
@@ -53,12 +53,14 @@ Voici les origines du produit à venir :
 		<td></td>
 	</tr>
 </table>
+</div>
 
-###Utah Van De Rock avec One Love de Theyssamy (Vas Y Donc Longane x Foudre de Guerre)
+<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+<h3>Utah Van De Rock avec One Love de Theyssamy (Vas Y Donc Longane x Foudre de Guerre)</h3>
 
-**Utah Von De Rock** est jeune étalon performer indicé SO 147, d'une très bonne souche maternelle, finaliste à 5, 6 et 7 ans à Fontainebleau, commençant à concourir au niveau international sur 145cm. Sur sa première génération il a l'avantage de faire naître de nombreux poulains pies, ce dont nous rêvions. **One Love de Theyssamy** est quant à elle une bonne gagnante en CSO indicé 117, mère d'Alibi de Theyssamy, son premier produit qui éffectue une brillante saison en cycle classique 6 ans.
+<p><strong>Utah Von De Rock</strong> est jeune étalon performer indicé SO 147, d'une très bonne souche maternelle, finaliste à 5, 6 et 7 ans à Fontainebleau, commençant à concourir au niveau international sur 145cm. Sur sa première génération il a l'avantage de faire naître de nombreux poulains pies, ce dont nous rêvions. <strong>One Love de Theyssamy</strong> est quant à elle une bonne gagnante en CSO indicé 117, mère d'Alibi de Theyssamy, son premier produit qui éffectue une brillante saison en cycle classique 6 ans.</p>
 
-Voici les origines du produit à venir :
+<p>Voici les origines du produit à venir :</p>
 <table class="genealogie">
 	<tr>
 		<td rowspan="4" class="c-cell">Utah Van De Rock (SFB)</td>
@@ -102,11 +104,13 @@ Voici les origines du produit à venir :
 	</tr>
 </table>
 
-###Nervoso avec Josabeth (Ami de la Fosse x Foudre de Guerre)
+<h3>Nervoso avec Josabeth (Ami de la Fosse x Foudre de Guerre)</h3>
 
-Après une très bonne carrière sportive la production de **Nervoso** s'avère très prométeuse. Nous lui avons associé **Josabeth**, une jument descendante de la célèbre championne du monde **Pomone B** et propre sœur de **Ma Pomme** (qui a produit **Fair Play III**, **Oiseau Mouche**, **Coppelia**, etc.).
+<p>Après une très bonne carrière sportive la production de <strong>Nervoso</strong> s'avère très prométeuse. Nous lui avons associé <strong>Josabeth</strong>, une jument descendante de la célèbre championne du monde <strong>Pomone B</strong> et propre sœur de <strong>Ma Pomme</strong> (qui a produit <strong>Fair Play III</strong>, <strong>Oiseau Mouche</strong>, <strong>Coppelia</strong>, etc.).</p>
+</div>
 
-Voici les origines du produit à venir :
+<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+<p>Voici les origines du produit à venir :</p>
 <table class="genealogie">
 	<tr>
 		<td rowspan="4" class="c-cell">Nervoso SFB</td>
@@ -150,11 +154,11 @@ Voici les origines du produit à venir :
 	</tr>
 </table>
 
-###Marlou des Etisses avec Hawai de Theyssamy (Quatoubet du Rouet x Mexico)
+<h3>Marlou des Etisses avec Hawai de Theyssamy (Quatoubet du Rouet x Mexico)</h3>
 
-**Marlou des Etisses** nous a séduit par son modèle harmonieux. Ses performances et un prix attractif nous l'ont fait lui associer **Hawai de Theyssamy** qui a notamment produit **Une Star de Theyssamy**, ISO 147 à 6 ans.
+<p><strong>Marlou des Etisses</strong> nous a séduit par son modèle harmonieux. Ses performances et un prix attractif nous l'ont fait lui associer <strong>Hawai de Theyssamy</strong> qui a notamment produit <strong>Une Star de Theyssamy</strong>, ISO 147 à 6 ans.</p>
 
-Voici les origines du produit à venir :
+<p>Voici les origines du produit à venir :</p>
 <table class="genealogie">
 	<tr>
 		<td rowspan="4" class="c-cell">Marlou Des Etisses SFA</td>
@@ -197,3 +201,4 @@ Voici les origines du produit à venir :
 		<td></td>
 	</tr>
 </table>
+</div>

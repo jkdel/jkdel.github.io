@@ -7,7 +7,8 @@ og_image_width: 654
 og_image_height: 342
 ---
 
-Erotic de Theyssamy (**Viking du Bary** x **Totoche du Banney**) né le 22/04/2014 fait ses premiers galops et premières gamelles.
+<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+<p>Erotic de Theyssamy (<strong>Viking du Bary</strong> x <strong>Totoche du Banney</strong>) né le 22/04/2014 fait ses premiers galops et premières gamelles.</p>
 
 <table class="genealogie">
 	<tr>
@@ -51,7 +52,9 @@ Erotic de Theyssamy (**Viking du Bary** x **Totoche du Banney**) né le 22/04/20
 		<td></td>
 	</tr>
 </table>
+</div>
 
+<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
 <div class="gallery" style="display:block;">
 	<ul class="rig columns-4">
 		<li><a href="/images/erotic_theyssamy_galops_0414_5.jpg" title="Erotic de Theyssamy"><img src="{{ site.baseurl }}/images/erotic_theyssamy_galops_0414_5_link_pv.jpg" alt='Erotic de Theyssamy' /></a></li>
@@ -62,4 +65,5 @@ Erotic de Theyssamy (**Viking du Bary** x **Totoche du Banney**) né le 22/04/20
 		<li><a href="/images/erotic_theyssamy_galops_0414_3.jpg" title="J'engage déjà fort"><img src="{{ site.baseurl }}/images/erotic_theyssamy_galops_0414_3_link_pv.jpg" alt="Erotic de Theyssamy - J'engage déjà fort" /></a></li>
 		<li><a href="/images/erotic_theyssamy_galops_0414_2.jpg" title="Enfin sage"><img src="{{ site.baseurl }}/images/erotic_theyssamy_galops_0414_2_link_pv.jpg" alt='Erotic de Theyssamy - Enfin sage' /></a></li>
 	</ul>
+</div>
 </div>

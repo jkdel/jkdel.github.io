@@ -7,9 +7,12 @@ og_image_width: 1200
 og_image_height: 628
 ---
 
-Black Pearl de Theyssamy est une jument SF par **Negus de Talma** et **Kazia du Rocher** par **Brazilia Paluelle**.
-Gentille, dans le sang, avec un bon coup de saut et du potentiel elle serait idéale pour un cavalier voulant se faire plaisir. Ses 3 belles allures, son équlibre et son chic sauront vous charmer...
+<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+<p>Black Pearl de Theyssamy est une jument SF par <strong>Negus de Talma</strong> et <strong>Kazia du Rocher</strong> par <strong>Brazilia Paluelle</strong>.
+Gentille, dans le sang, avec un bon coup de saut et du potentiel elle serait idéale pour un cavalier voulant se faire plaisir. Ses 3 belles allures, son équlibre et son chic sauront vous charmer...</p>
+</div>
 
+<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
 <table class="genealogie">
 	<tr>
 		<td rowspan="4" class="c-cell">Negus De Talma SFA</td>
@@ -52,5 +55,8 @@ Gentille, dans le sang, avec un bon coup de saut et du potentiel elle serait id�
 		<td></td>
 	</tr>
 </table>
+</div>
 
+<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
 <div class="lazyYT" data-youtube-id="1sHt3rbdWL0" data-ratio="16:9">Chargement...</div>
+</div>

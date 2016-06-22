@@ -18,7 +18,7 @@ layout: default
                   <p class="post-meta">{{ collection.docs.last.date | date: "%d/%m/%Y" }}</p>
                   <a class="fb" target="_blank" href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ collection.docs.last.url }}"><div></div></a>
               </header>
-              <div class="post-content{% unless collection.docs.last.nocolumn %} post-column {% endunless %}">{{ collection.docs.last.content }}
+              <div class="post-content pure-g{% unless collection.docs.last.nocolumn %} post-column {% endunless %}">{{ collection.docs.last.content }}
               </div>
               </article>
             </td>
