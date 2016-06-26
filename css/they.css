@@ -260,7 +260,7 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
   padding: 0;
 }
 
-.vendu h1.post-title::after {
+.vendu h2.post-title::after {
   position: relative;
   left: 12px;
   -webkit-border-radius: 10;
@@ -277,7 +277,7 @@ table.content-holder:nth-child(4) .genealogie td.c-cell {
   margin-bottom: 20px;
 }
 
-.post-header h1 {
+.post-header h2 {
   font-size: 18pt;
   font-weight: 500;
   font-family: "Roboto";

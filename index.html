@@ -14,7 +14,7 @@ layout: default
                   <span class="document-index">{% for doc in collection.docs %}{{forloop.length}}/{{forloop.length}}{% break %}{% endfor %}
                   </span>
                   </div>
-                  <h1 class="post-title">{{ collection.docs.last.title }}</h1>
+                  <h2 class="post-title">{{ collection.docs.last.title }}</h2>
                   <p class="post-meta">{{ collection.docs.last.date | date: "%d/%m/%Y" }}</p>
                   <a class="fb" target="_blank" href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ collection.docs.last.url }}"><div></div></a>
               </header>

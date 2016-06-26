@@ -16,7 +16,7 @@
             <span class="document-index">{% for collection in site.collections %}{% if collection.label == page.collection %}{% for document in collection.docs %}{% if page.url == document.url %}{{forloop.index}}/{{forloop.length}}{% endif %}{% endfor %}{% endif %}{% endfor %}
             </span>
           </div>
-          <h1 class="post-title">{{ page.title }}</h1>
+          <h2 class="post-title">{{ page.title }}</h2>
           <p class="post-meta">{{ page.date | date: "%d/%m/%Y" }}</p>
           <a class="fb" target="_blank" href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}"><div></div></a>
         </header>

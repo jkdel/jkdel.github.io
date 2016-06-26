@@ -5,15 +5,8 @@ description: "L'élevage de Theyssamy, situé au haras des Boulaies dans l'Orne,
 baseurl: ""
 url: "http://www.theyssamy.fr"
 github_username: jkdel
-highlighter: rouge
 lsi: false
 encoding: utf-8
-
-# Build settings
-markdown: rdiscount
-# enables SmartyPants (nice curly quotation marks, em/en dashes, elipses, etc):
-rdiscount:
-  extensions: [smart]
 
 collections:
   elevage:
@@ -29,19 +22,19 @@ defaults:
       type: "elevage"
     values:
       layout: "post"
-      js: "they_post.js"
+      js: "they_post.min.js"
   -
     scope:
       type: "a_vendre"
     values:
       layout: "post"
-      js: "they_post.js"
+      js: "they_post.min.js"
   -
     scope:
       type: "actualites"
     values:
       layout: "post"
-      js: "they_post.js"
+      js: "they_post.min.js"
 
 gems:
   - jekyll-sitemap
