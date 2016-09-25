@@ -1,6 +1,6 @@
 # theyssamy-ajax
 
-A small one-page website using AJAX and jekyll.
+A small responsive one-page website using AJAX and jekyll.
 
 ## Content
 
