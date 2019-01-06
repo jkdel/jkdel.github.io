@@ -12,6 +12,7 @@ function back_to_state(event) {
 
 function load_and_update(len, collection_index) {
 	href = col[collection_index].docs[len];
+	console.log(href);
 	$("#"+col[collection_index].name).load(href+" article", function() {
 		$('.gallery', this).each(function() {
 			$(this).magnificPopup({
