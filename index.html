@@ -5,7 +5,7 @@ layout: default
         <table class="content-holder">
           <tr>
             <td class="goto-side ajp" id="{{ id_prefix }}-goto-left">{% for doc in collection.docs %}{% assign col_len_m_2 = forloop.length | minus:2 %}{% break %}{% endfor %}
-              <a title="Article précédent" class="arrow ajp" id="{{ id_prefix }}-arrow-left" href="{% for doc in collection.docs offset:col_len_m_2 limit:1 %}{{ doc.url }}{% endfor %}"><i class="fa fa-angle-left"></i></a>
+              <a title="Article précédent" class="arrow ajp" id="{{ id_prefix }}-arrow-left" href="{{ site.baseurl }}/{% for doc in collection.docs offset:col_len_m_2 limit:1 %}{{ doc.url }}{% endfor %}"><i class="fa fa-angle-left"></i></a>
             </td>
             <td class="content" id="{{collection.label}}">
               <article{% if collection.docs.last.class %} class="{{collection.docs.last.class}}"{% endif%}>
@@ -23,7 +23,7 @@ layout: default
               </article>
             </td>
             <td class="goto-side ajn" id="{{ id_prefix }}-goto-right">{% for doc in collection.docs %}{% if forloop.length == 1 %}{% assign ref = nil %}{% else %}{% assign ref = collection.docs[0].url %}{% endif %}{% break %}{% endfor %}
-              <a title="Article suivant" class="arrow ajn" id="{{ id_prefix }}-arrow-right" href="{{ ref }}"><i class="fa fa-angle-right"></i></a>
+              <a title="Article suivant" class="arrow ajn" id="{{ id_prefix }}-arrow-right" href="{{ site.baseurl }}/{{ ref }}"><i class="fa fa-angle-right"></i></a>
             </td>
           </tr>
         </table>
